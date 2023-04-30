@@ -30,7 +30,7 @@ label start:
 
     # This ends the game.
 
-    show screen mapscroll
+    show screen mapscroll("kitchen")
     $ ui.interact()
 
     return
