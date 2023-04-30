@@ -2,30 +2,42 @@ init:
     transform buttonzoom:
         zoom 0.16
 
-$ maps = {
-    'kitchen': {
-        'left': 'bathroom_door',
-        'right': 'garden',
-    },
-    'garden': {
-        'left': 'kitchen',
-    },
-    'bathroom_door': {
-        'up': 'bathroom',
-        'left': 'bedroom',
-        'right': 'kitchen',
-    },
-    'bathroom': {
-        'down': 'bathroom_door',
-    },
-    'bedroom': {
-        'right': 'bathroom_door',
-        'up': 'closet',
-    },
-    'closet': {
-        'down': 'bedroom',
-    },
-}
+python early:
+    maps = {
+        'kitchen': {
+            'left': 'bathroom_door',
+            'right': 'garden',
+        },
+        'garden': {
+            'left': 'kitchen',
+        },
+        'bathroom_door': {
+            'up': 'bathroom',
+            'left': 'bedroom',
+            'right': 'kitchen',
+        },
+        'bathroom': {
+            'down': 'bathroom_door',
+        },
+        'bedroom': {
+            'right': 'bathroom_door',
+            'up': 'closet',
+        },
+        'closet': {
+            'down': 'bedroom',
+        },
+    }
+
+    def parse_mapscroll(lexer):
+        return lexer.rest()
+
+    def enter_mapscroll(current_map):
+        renpy.scene()
+        renpy.show(f"bg {current_map}")
+        renpy.show_screen("mapscroll", current_map=current_map)
+        renpy.ui.interact()
+
+    renpy.register_statement("mapscroll", parse=parse_mapscroll, execute=enter_mapscroll)
 
 screen mapscroll(current_map):
     imagebutton:
