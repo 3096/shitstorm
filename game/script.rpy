@@ -138,7 +138,7 @@ label start:
     #GAME START
 
     s "Oh good, you're awake."
-    John "What... happened?"
+    j "What... happened?"
         
     s "Okay, don't freak out but..."
 
