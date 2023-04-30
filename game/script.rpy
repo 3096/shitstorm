@@ -133,7 +133,7 @@ label start:
     s "Sure, let's do it."
     a "...fine. I'll only look out for you."
 
-    #scene changes
+    #scene changes - kitchen
 
     #GAME START
 
@@ -143,6 +143,37 @@ label start:
     s "Okay, don't freak out but..."
 
     a "YOU FUCKING KILLED HER"
+    j "Wait, what???"
+    a "I always knew your stupid pranks were terrible, but this time you went too far!!"
+    a "Scott's mother died from laxatives because of YOU!"
+
+    j "I didn't know it would go so far... People on reddit never mentioned it can kill a person.."
+    a "YOU'RE TAKING THESE IDEAS FROM REDDIT????"
+    j "I didn't mean for this to happen!"
+    s "Alright guys, let's all calm down for now."
+
+    a "CALM DOWN?? YOUR MOTHER IS DEAD, YOUR BOYFRIEND MURDERED HER! AND YOU WANT US TO CALM DOWN?"
+    j "Oh god... Scott.. I'm so sorry."
+    s "Hey, it's okay, you didn't mean for this to happen. It was an accident!"
+
+    a "His \"accident\"..." 
+    a "IS CALLED MANSLAUGHTER"
+    a "We need to go to the police."
+
+    j "Police? No no no.. Please don't..!"
+    j "I didn't mean for this to happen..! I don't want to go to jail! Please don't.."
+    s "You can can call the police if you want, but just remember you'll ALSO have to face the consequences too."
+    s "We're all accomplices here."
+    a "..."
+    s"We have to do something about this that DOESN'T involve the police."
+
+    j "... Where do you guys keep the cleaning supplies?"
+    a "Why?"
+    
+    j "We need to hide the body."
+
+    
+
 
 
 
