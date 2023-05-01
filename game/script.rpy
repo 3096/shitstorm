@@ -256,22 +256,6 @@ label start:
     s "If I can remember... It should be somewhere in the kitchen"
 
     #Scene change/player goes to kitchen 
-
-    j "Do you have any idea where the bleach is?"
-
-    s "My memory seems foggy. Why not check the cabinets?"
-
-    #If player picks the wrong cabinet - check diagram for ref
-
-    j "No... why would it be here?"
-    j "I'm such an idiot, I shouldn't have pulled that stupid prank..."
-
-    #exit to main screen of kitchen
-
-    #Player opens middle cabinet but it has nothing 
-
-    "Nothing"
-
     #if player picks the bottom cabinet (take ref from diagram)
     #items will be clickable when hovered over
 
@@ -288,7 +272,14 @@ label start:
 
     j "I need to find another cabinet."
 
-    
+    #After player collects everything 
+    #scene changes to the front of the bathroom
+
+    s "Okay, now that we have everything let's head back to the bathroom."
+
+    a "Is he... crying?"
+
+    j "I... feel like a monster. This is all my fault. Even though he told me that his mother was horrible. "
 
 
 
