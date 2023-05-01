@@ -134,6 +134,7 @@ label start:
     a "...fine. I'll only look out for you."
 
     #scene changes - kitchen
+    # sprites show
 
     #GAME START
 
@@ -172,25 +173,147 @@ label start:
     
     j "We need to hide the body."
 
-    
+    #Cover the body segment
+
+    j "First thing's first, let's cover her body with something.."
+    s "Well, We do have a tarp somewhere in the garden."
+
+    #Navigation tool highlights
+    #Player can go to different areas
+
+    j "First thing's first, let's cover her body with something.."
+    s "Well, We do have a tarp somewhere in the garden."
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-    
 
 
 
     mapscroll kitchen
+
+    #Cover the body segment
+
+    #if the player goes to wrong room, characters will show up
+
+    #Wrong place - MIL BEdroom
+
+    a "Shouldn't be in here stupid, you're finding the tarp in the garden." 
+
+    #bathroom
+
+    s "Let's not go in there for a while.."
+
+    #Scene change - garden
+    #Sprites will show up
+
+    s "The tarp is over there by the under the table."
+
+    #if player clicks anywhere else that's not under the table
+
+    s "That's not under the table"
+
+    #After player hovers and click over tarp to know it's clickable
+
+    j "We're going to need some cleaning supplies too."
+
+    s "Hey... do you remember those true crime shows we used to watch all the time in high school?"
+
+    j "What about them?"
+
+    s "Well... what do those people normally get when cleaning a body?"
+    #John tells the needed supplies to hide body
+
+    j "We need gloves to cover our fingerprints.. "
+    j "Some bleach would help remove the blood stains but hydrogen peroxide gets rid of the blood stains under UV light"
+    j "We need a mop too."
+
+    a "You sound a bit too prepared for this..."
+
+    # Player will now navigate and press on needed items for the game, take a look on diagram for more info
+
+    #Gloves
+
+    j "The gloves are on the table to my right... Easy find"
+
+    #gloves are now clickable and player picks it up
+
+    j "I found the gloves"
+
+    j "Now we need the bleach and hydrogen peroxide."
+
+    j "Would they be in the bathroom?"
+
+    s "No... It wouldn't"
+
+    s "When I was a child, my mother would constantly clean anything she deems as dirty..."
+    s "She wouldn't put any cleaning products in there"
+
+    j "Where would she put it?"
+
+    s "If I can remember... It should be somewhere in the kitchen"
+
+    #Scene change/player goes to kitchen 
+
+    j "Do you have any idea where the bleach is?"
+
+    s "My memory seems foggy. Why not check the cabinets?"
+
+    #If player picks the wrong cabinet - check diagram for ref
+
+    j "No... why would it be here?"
+    j "I'm such an idiot, I shouldn't have pulled that stupid prank..."
+
+    #exit to main screen of kitchen
+
+    #Player opens middle cabinet but it has nothing 
+
+    "Nothing"
+
+    #if player picks the bottom cabinet (take ref from diagram)
+    #items will be clickable when hovered over
+
+    #if player picks up bleach
+    j "Here's the bleach.."
+    a "I can't believe you're going through with this."
+
+    #if player picks up hydrogen peroxide
+
+    j "Hydrogen peroxide... best way to hide the blood stains."
+    s "Who knew those true crimes show paid off?"
+
+    #If player picks wrong cabinet
+
+    j "I need to find another cabinet."
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
 
     return
