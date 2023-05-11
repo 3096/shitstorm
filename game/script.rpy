@@ -635,4 +635,136 @@ label start:
 
 label Angels Route
 
-label Scotts route
+s "No no no no no.... Please believe me! I did it for you. All of this is for you!"
+
+j "Scott... please. Just leave me alone, I need some time to collect my thoughts."
+
+s "Okay... I'll give you some space. But please, reconsider this."
+
+#Kitchen scene
+"[i] John and ANgel leaves to the kitchen [/i]"
+
+a "I'm sorry."
+
+j "There's nothing to be sorry about."
+
+a "I know it's not easy to pick me over him."
+
+j "Scott was all that I had..."
+
+a "I know."
+
+j " No.. you really don’t. When mom and dad disowned me, I was at my lowest point in my life. "
+
+j "I fell in love with Scott at the lowest point of my life. He knew who I was, yet ...he allowed himself to fall for me."
+
+a "I didn't know that."
+
+j "How could you? You never contacted me."
+
+a "After you left, I was under scrutiny by our parents. "
+
+a "Everything I did, what food to eat, what career to take, I did it for them. "
+
+a "I never lived for myself, even now.. I'm glad I can be in your life now."
+
+j "You said this was the last time we'd talk."
+
+a "I only said that because I was hurt. I know it's not an excuse to give after everything we've been through. I shouldn't have said that. I'm sorry."
+
+j "I want to believe you."
+
+j "I was so angry back then, I would not have never believed you. I never trusted anyone at that point, including Scott. But he stuck around and helped me become better."
+
+j "I thought I was better."
+
+j "He's been protecting me from this sh*t world. Protecting me when I had no one."
+
+j "He still protecting me after his [i] his own mother [/i] died..."
+
+a "Doesn't it feel strange how quickly he was to help?"
+
+j "What do you man by that?"
+
+a "I mean [i] his mother just died [/i] Scott never had the time to process it, yet his first thought was to [i] help you [/i]?"
+
+
+a "Why was he so quick to hide her body?"
+
+j "You don't think..."
+
+#Audio plays thuds
+"[i] THUDS [/i]"
+
+s "John. Don't listen to her."
+
+a "You b*tch, he's not going to believe you after evrything we've been through."
+
+s "Why would I ever hurt him? I lov him so much..."
+
+j "Scott... [i] Did you kill your mom [/i]?"
+
+s "Just listen to me. Angel does NOT have your best interest. She wanted to call the police on you when it happened."
+
+s "And she still tried to call the police after everything we've been through."
+
+s "Only reason she stopped in the beginning was because [b] she knew [/b] she was part of this mess."
+
+a "I'm tired of running away. I'm tired of hiding our mistakes. We need to take this head on."
+
+s "How can we trust you?"
+
+j "Scott, did you kill her?"
+
+s "Honey, listen to me. I would [b] NEVER [/b] hurt you like Angel did."
+
+s "I don't know what I would do without you!"
+
+j "Did you kill her?"
+
+s "You're not listening to me. Why don't you trust me? After all we've been through."
+
+j "How can I trust you if you can't even answer this?"
+
+s "How can you just say that? We love each other. Why would you trust her over me?"
+
+j "If you're not going to tell me... I don't think we're right for each other."
+
+s "[i]No no no no... [/i]"
+
+s "[i] No no no no no no no....[/i]"
+
+#scene changes angel route
+
+s "Please... You don't mean that, do you?"
+
+j "I do. No matter how much I love you, I[b] cannot [/b] trust you."
+
+s "I did this for you. Everything I did was for you."
+
+j "Why do you keep saying that?"
+
+s "We were never going to be happy for as long as she lived."
+
+a "You resorted to murder??"
+
+s "I had no other choice. There was no other way around this."
+
+j "How could you... You made me believe that [i] I KILLED HER [/i]"
+
+s "I'm sorry... I'm so sorry. I did what I can to protect you. I would've told you sooner if [b] she [/b] wasn't in the way."
+
+a "How could you manipulate my brother like that? He [i] LOVED [/i] you."
+
+a "And you took advantaged of his kidness... you turned it into your own sadistic game."
+
+s "Stop talking...! This wouldn't have happened if it wasn't for you..."
+
+a "No Scott. This wouldn't have happened if you didn't [b] spike her food [/b]"
+
+s "You don't understand me at all."
+
+j "Did you do it?"
+
+
+label Scotts Route
