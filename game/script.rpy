@@ -202,8 +202,7 @@ label start:
 
     window hide
     mapscroll kitchen gloves bleach hydrogenperoxide
-
-    # window show
+    window show
 
     #Cover the body segment
 
@@ -791,7 +790,7 @@ label angels_route:
     "{i} John and Angel hurridely escapes the house. {/i}"
 
 
-    "{i} Without a moment of hesitation, Scott quickly follows them. {/i}"\
+    "{i} Without a moment of hesitation, Scott quickly follows them. {/i}"
 
     #play siren noises
 

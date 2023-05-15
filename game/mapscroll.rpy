@@ -62,15 +62,12 @@ python early:
         if is_next:
             renpy.show_screen("mapscroll_screen", current_map=current_map, items_needed=items_needed)
         else:
-            renpy.show_screen("mapscroll_screen", current_map=current_map, items_needed={item: True for item in items_needed})
-            renpy.ui.interact()
+            renpy.call_screen("mapscroll_screen", current_map=current_map, items_needed={item: True for item in items_needed})
 
     def pick_up_item(current_map, item_name, items_needed):
         items_needed[item_name] = False
         if not any(items_needed.values()):
-            renpy.hide_screen("mapscroll_screen")
-            renpy.ui.returns()
-            pass
+            return 0
         else:
             enter_mapscroll((current_map, items_needed), True)
 
@@ -107,7 +104,7 @@ screen mapscroll_screen(current_map, items_needed):
             at buttonzoom
     if 'items' in maps[current_map]:
         for item_name, item_info in maps[current_map]['items'].items():
-            if items_needed[item_name]:
+            if item_name not in items_needed or items_needed[item_name]:
                 imagebutton:
                     idle f'images/item {item_name}.png'
                     xalign item_info['x']
