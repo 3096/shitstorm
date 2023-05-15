@@ -100,7 +100,17 @@ label start:
 
     #cutscene 1
 
+    "..."
+    "..."
+    "..."
+    "..."
+    "..."
+    "..."
+    "..." 
+
     #cutscene 2
+
+    "..."
 
     #Switch to kitchen
 
