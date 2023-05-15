@@ -766,5 +766,117 @@ s "You don't understand me at all."
 
 j "Did you do it?"
 
+#Scene change
+s "It was our love that killed her...! Your laxatives and my cyanide. Our love killed her."
+
+a "Get away from us."
+
+s "WHY? I answered everything you asked me to. I did everything for you John, please tell her she's being unreasonable."
+
+j "We need to go."
+
+s "NO PLEASE!"
+
+"[i] John and Angel hurridely escapes the house. [/i]"
+
+
+"[i] Without a moment of hesitation, Scott quickly follows them. [/i]"\
+
+#play siren noises
+
+#scene changes to pollice end
+
+officer "FREEZE! PUT YOUR HANDS IN THE AIR!"
+
+Officer 2 "ANYTHING YOU CAN SAY CAN AND WILL BE AGAINST YOU IN THE COURT OF LAW!"
+
+"Shit..."
+
 
 label Scotts Route
+
+a "John, what the f*ck are you saying? Do you see me? Look at what that PSYCHO did to me!"
+
+j "Angel, you've been against me from the start. How can I believe you now?"
+
+s "Angel, just stop. We're not going to believe you after all of your deception"
+
+a "You're one to talk b*tch."
+
+j "ANGEL! That's enough."
+
+a "John, please, you have to believe me. I'm your sister, you can trust me when I tell you, Scott is not who he says he is."
+
+j "Stop talking Angel."
+
+j "You have been trying to call the police since the beginning."
+
+j "You made us believe that you CARED about me by coming. Only to leave when it's most convenient."
+
+a "That's not it at all."
+
+s "Do you want me to shut her up dear?"
+
+j "..."
+
+a "No no no please don't..."
+
+a "John? You can believe me, right?"
+
+j "..."
+
+s "Angel, you have been a burden since the beginning. You need to be quiet."
+
+#Scott and angel both disappear
+
+#followed by angel's scream
+
+#Scott comes back in frame
+
+s "SOrry about that my darling."
+
+#Scene change cut scene Scott's route
+
+j "..."
+
+s "I know that this wasn't an easy decision to make."
+
+j "Why did you killed her?"
+
+s "Killing is such a harsh word... I only did what's needed to be done."
+
+j "By killing?"
+
+s "She was a burden to our lives and a stain that needs to be removed."
+
+s "The second you came to my life, I knew I had to protect you."
+
+j "Is that why you killed your mom?"
+
+s "It was our love that killed her."
+
+s "Your funny laxatives and my toxic cyanide. We were made for each other."
+
+j "Was this planned since the beginning?"
+
+s "I knew no matter what happened, she would always be in the way. I wanted our happiness."
+
+j "Weren't we happy before?"
+
+s "We were. Aren't we happier now?"
+
+j "...I don't know."
+
+s "I don't know what will happen now, but as long as you're here, I'm okay."
+
+s "Let's leave this prison together."
+
+- #scene changes - 
+
+#sounds of running door opening, sirens
+
+"Officer: FREEZE! PUT YOUR HANDS IN THE AIR"
+
+"Officer 2: ANYTHING YOU CAN SAY CAN AND WILL BE AGAINST YOU IN THE COURT OF LAW"
+
+"Shit..."
