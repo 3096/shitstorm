@@ -18,7 +18,7 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -33,7 +33,7 @@ label start:
     # e "Once you add a story, pictures, and music, you can release it to the world!"
 
     # This ends the game.
-
+   
     s "Are you nervous?"
     j "Me? Nervous? No way- I mean, are you nervous? Because I'm not nervous."
     s "So you are nervous."
