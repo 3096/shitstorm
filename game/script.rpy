@@ -18,7 +18,7 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    
+    scene bg car_intro
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -40,10 +40,10 @@ label start:
     j "... maybe"
 
     s "*laughs* I knew it. You've been acting strange all day. What's going on inside your head? Almost feels like you're hiding something."
-    j "Well, you told me before that your moter can be..."
+    j "Well, you told me before that your mother can be..."
     s "Difficult?"
-    j "Sometimes.. So, of course I'm nervous to meet her! WHat if she doesn't like me?"
-    s "It's true that she's hard to plase... but it'll just be one dinner together. We should be fine."
+    j "Sometimes.. So, of course I'm nervous to meet her! What if she doesn't like me?"
+    s "It's true that she's hard to please... but it'll just be one dinner together. We should be fine."
     j "I guess... but, I'm not really the type of person people would want to bring home to their parents you know? I just don't want to let you down..."
     s "Hey, listen to me. You're not the person who pulled those silly pranks back in high school anymore. You're the person who I fell in love with. You're smart and ambitious, I've never met anyone as amazing as you. If my mother can't see that, then that's her loss"
     j "But... what if..."
@@ -51,18 +51,18 @@ label start:
     a "Get your shit together, John. Who cares if she doesn't like you? If worse comes to worst, you and Scott were doing fine without her anyways, so what's the big deal?"
     j "Maybe you're right Angel... I think I really needed to hear that."
     a "I just don't want you to overthink this..."
-    j "And I appreciate it. THanks for coming with us today. You're my favorite family member."
+    j "And I appreciate it. Thanks for coming with us today. You're my favorite family member."
     a "Of course, I'm the best."
     a "Wait. Mom and dad cut you off... so doesn't that make me your only family member?"
     j "..."
     a "idiot."
 
-    s " *laughs* Your sister was rightm you know? About how we don't need my mother's approval. No matter what happens today, we're in this together"
+    s " *laughs* Your sister was right you know? About how we don't need my mother's approval. No matter what happens today, we're in this together"
     j "Thanks, Scott..."
     a "Where's my thank you?"
     j "thankkkk youuu Angel"
     a "heh"
-    a "How much longer is it till we get ot the house? I feel like we've been together in this car forever now"
+    a "How much longer is it till we get to the house? I feel like we've been together in this car forever now"
     s "Actually, we're pulling in now.. Welcome to the Charmin household."
 
     # John, Angel, and Scott's POV of the front of the house
@@ -202,7 +202,17 @@ label start:
 
 
 
-    mapscroll kitchen
+
+
+
+
+
+    
+
+
+    window hide
+    mapscroll kitchen gloves bleach hydrogenperoxide
+    window show
 
     #Cover the body segment
 
@@ -394,8 +404,8 @@ label start:
     a "Oh god."
 
     #cutscene reddit
-    "{i} JohnPoe: Where to hide (fake) body to scare MIL?"
-    "Hey guys, so I want to do a funny prank on my MIL by hiding this fake body bag around my house. She’s coming home soon lol so I need to find a place around my house quickly. Do you guys know the best spot? {/i}"
+    "{i}JohnPoe: Where to hide (fake) body to scare MIL?{/i}"
+    "{i}Hey guys, so I want to do a funny prank on my MIL by hiding this fake body bag around my house. She’s coming home soon lol so I need to find a place around my house quickly. Do you guys know the best spot?{/i}"
     
     j "Alright, I posted it."
 
@@ -466,7 +476,7 @@ label start:
 
     j "Pleas ANgel, you forged signatures all the time. THey were perfect replicas."
 
-    a "That's only to save your ass. We were young and I was stupid. Now you're using that agaist [i] me [/i]?"
+    a "That's only to save your ass. We were young and I was stupid. Now you're using that agaist {i}me{/i}?"
 
     j "Angel, I need you. We need you. Please help me one last time."
 
@@ -484,29 +494,27 @@ label start:
 
     j "..."
 
-    label letter scene
+label letter_scene:
 
-    "If you're seeing this, then I'm already gone. THere's no reason for me to stay. I've decided to run away because..."
+    "If you're seeing this, then I'm already gone. There's no reason for me to stay. I've decided to run away because..."
 
-        menu: 
-            "life has been miserable, I needed to go."
-                
-        
-        menu: 
-            "I have found a new chance at life, with someone else."
-        
-        menu:
-            "No one will notice if I disappeared"
+    menu: 
+        "life has been miserable, I needed to go.":
+            pass
+        "I have found a new chance at life, with someone else.":
+            pass
+        "No one will notice if I disappeared":
+            pass
+    
     "This was not an easy decision to make. Although I am certain this is the path I am willing to take. If you read this letter..."
 
-        menu
-            "don't bother trying to find me."
-        
-        menu:
-            "discard this letter and live your own life."
-
-        menu:
-            "Keep this letter private between us."
+    menu:
+        "don't bother trying to find me.":
+            pass
+        "discard this letter and live your own life.":
+            pass
+        "Keep this letter private between us.":
+            pass
         
     "There's not much else to say. I don't plan on being found, so don't look for me."
     "Goodbye."
@@ -543,7 +551,7 @@ label start:
 
     j "Some brother I am... Constantly dragging her down to clean my shit. Now she's saying our parents were right, she doesn't mean it right?"
 
-    s "[i] I have a bad feeling about this [/i]"
+    s "{i}I have a bad feeling about this{/i}"
 
     s "I'm going to look for her."
 
@@ -569,7 +577,7 @@ label start:
 
     #I hear her in the closet..
 
-    "[i] Click on the closet [/i]"
+    "{i}Click on the closet{/i}"
 
     j "Damn. The door's locked."
 
@@ -592,7 +600,7 @@ label start:
 
     #Thuds sound
 
-    "[i] Thuds against the door"
+    "{i}Thuds against the door"
 
     j "That's definitely not okay. Angel???"
 
@@ -602,7 +610,7 @@ label start:
 
     #Screaming
 
-    "[i] Angel Screaming [/i]"
+    "{i}Angel Screaming{/i}"
 
     a "LET ME OUT MOTHER F*CKER!!!"
 
@@ -610,7 +618,7 @@ label start:
 
     j "Angel??"
 
-    "[i] Angel kicks open the door to reveal she had been tied up and looked roughed [/i]"
+    "{i}Angel kicks open the door to reveal she had been tied up and looked roughed{/i}"
 
     a "YOU B*TCH!"
 
@@ -633,260 +641,255 @@ label start:
     s "Why would he not listen to you? Angel was only thinking of saving herself, she was going to cut you off, remember? I would never do that to you. I can't lose you. We're in this together."
 
     menu:
-        "I trust you Angel."
-            jump Angels Route
+        "I trust you Angel.":
+            jump angels_route
+        "I believe you Scott.":
+            jump scotts_route
 
+label angels_route:
 
-    menu:
-        "I believe you Scott."
-            jump Scotts route
-    
-    return
+    s "No no no no no.... Please believe me! I did it for you. All of this is for you!"
 
-label Angels Route
+    j "Scott... please. Just leave me alone, I need some time to collect my thoughts."
 
-s "No no no no no.... Please believe me! I did it for you. All of this is for you!"
+    s "Okay... I'll give you some space. But please, reconsider this."
 
-j "Scott... please. Just leave me alone, I need some time to collect my thoughts."
+    #Kitchen scene
+    "{i}John and ANgel leaves to the kitchen{/i}"
 
-s "Okay... I'll give you some space. But please, reconsider this."
+    a "I'm sorry."
 
-#Kitchen scene
-"[i] John and ANgel leaves to the kitchen [/i]"
+    j "There's nothing to be sorry about."
 
-a "I'm sorry."
+    a "I know it's not easy to pick me over him."
 
-j "There's nothing to be sorry about."
+    j "Scott was all that I had..."
 
-a "I know it's not easy to pick me over him."
+    a "I know."
 
-j "Scott was all that I had..."
+    j " No.. you really don’t. When mom and dad disowned me, I was at my lowest point in my life. "
 
-a "I know."
+    j "I fell in love with Scott at the lowest point of my life. He knew who I was, yet ...he allowed himself to fall for me."
 
-j " No.. you really don’t. When mom and dad disowned me, I was at my lowest point in my life. "
+    a "I didn't know that."
 
-j "I fell in love with Scott at the lowest point of my life. He knew who I was, yet ...he allowed himself to fall for me."
+    j "How could you? You never contacted me."
 
-a "I didn't know that."
+    a "After you left, I was under scrutiny by our parents. "
 
-j "How could you? You never contacted me."
+    a "Everything I did, what food to eat, what career to take, I did it for them. "
 
-a "After you left, I was under scrutiny by our parents. "
+    a "I never lived for myself, even now.. I'm glad I can be in your life now."
 
-a "Everything I did, what food to eat, what career to take, I did it for them. "
+    j "You said this was the last time we'd talk."
 
-a "I never lived for myself, even now.. I'm glad I can be in your life now."
+    a "I only said that because I was hurt. I know it's not an excuse to give after everything we've been through. I shouldn't have said that. I'm sorry."
 
-j "You said this was the last time we'd talk."
+    j "I want to believe you."
 
-a "I only said that because I was hurt. I know it's not an excuse to give after everything we've been through. I shouldn't have said that. I'm sorry."
+    j "I was so angry back then, I would not have never believed you. I never trusted anyone at that point, including Scott. But he stuck around and helped me become better."
 
-j "I want to believe you."
+    j "I thought I was better."
 
-j "I was so angry back then, I would not have never believed you. I never trusted anyone at that point, including Scott. But he stuck around and helped me become better."
+    j "He's been protecting me from this sh*t world. Protecting me when I had no one."
 
-j "I thought I was better."
+    j "He still protecting me after his {i}his own mother{/i} died..."
 
-j "He's been protecting me from this sh*t world. Protecting me when I had no one."
+    a "Doesn't it feel strange how quickly he was to help?"
 
-j "He still protecting me after his [i] his own mother [/i] died..."
+    j "What do you man by that?"
 
-a "Doesn't it feel strange how quickly he was to help?"
+    a "I mean {i}his mother just died{/i} Scott never had the time to process it, yet his first thought was to {i}help you{/i}?"
 
-j "What do you man by that?"
 
-a "I mean [i] his mother just died [/i] Scott never had the time to process it, yet his first thought was to [i] help you [/i]?"
+    a "Why was he so quick to hide her body?"
 
+    j "You don't think..."
 
-a "Why was he so quick to hide her body?"
+    #Audio plays thuds
+    "{i}THUDS{/i}"
 
-j "You don't think..."
+    s "John. Don't listen to her."
 
-#Audio plays thuds
-"[i] THUDS [/i]"
+    a "You b*tch, he's not going to believe you after evrything we've been through."
 
-s "John. Don't listen to her."
+    s "Why would I ever hurt him? I lov him so much..."
 
-a "You b*tch, he's not going to believe you after evrything we've been through."
+    j "Scott... {i}Did you kill your mom{/i}?"
 
-s "Why would I ever hurt him? I lov him so much..."
+    s "Just listen to me. Angel does NOT have your best interest. She wanted to call the police on you when it happened."
 
-j "Scott... [i] Did you kill your mom [/i]?"
+    s "And she still tried to call the police after everything we've been through."
 
-s "Just listen to me. Angel does NOT have your best interest. She wanted to call the police on you when it happened."
+    s "Only reason she stopped in the beginning was because [b] she knew [/b] she was part of this mess."
 
-s "And she still tried to call the police after everything we've been through."
+    a "I'm tired of running away. I'm tired of hiding our mistakes. We need to take this head on."
 
-s "Only reason she stopped in the beginning was because [b] she knew [/b] she was part of this mess."
+    s "How can we trust you?"
 
-a "I'm tired of running away. I'm tired of hiding our mistakes. We need to take this head on."
+    j "Scott, did you kill her?"
 
-s "How can we trust you?"
+    s "Honey, listen to me. I would [b] NEVER [/b] hurt you like Angel did."
 
-j "Scott, did you kill her?"
+    s "I don't know what I would do without you!"
 
-s "Honey, listen to me. I would [b] NEVER [/b] hurt you like Angel did."
+    j "Did you kill her?"
 
-s "I don't know what I would do without you!"
+    s "You're not listening to me. Why don't you trust me? After all we've been through."
 
-j "Did you kill her?"
+    j "How can I trust you if you can't even answer this?"
 
-s "You're not listening to me. Why don't you trust me? After all we've been through."
+    s "How can you just say that? We love each other. Why would you trust her over me?"
 
-j "How can I trust you if you can't even answer this?"
+    j "If you're not going to tell me... I don't think we're right for each other."
 
-s "How can you just say that? We love each other. Why would you trust her over me?"
+    s "{i}No no no no...{/i}"
 
-j "If you're not going to tell me... I don't think we're right for each other."
+    s "{i}No no no no no no no....{/i}"
 
-s "[i]No no no no... [/i]"
+    #scene changes angel route
 
-s "[i] No no no no no no no....[/i]"
+    s "Please... You don't mean that, do you?"
 
-#scene changes angel route
+    j "I do. No matter how much I love you, I[b] cannot [/b] trust you."
 
-s "Please... You don't mean that, do you?"
+    s "I did this for you. Everything I did was for you."
 
-j "I do. No matter how much I love you, I[b] cannot [/b] trust you."
+    j "Why do you keep saying that?"
 
-s "I did this for you. Everything I did was for you."
+    s "We were never going to be happy for as long as she lived."
 
-j "Why do you keep saying that?"
+    a "You resorted to murder??"
 
-s "We were never going to be happy for as long as she lived."
+    s "I had no other choice. There was no other way around this."
 
-a "You resorted to murder??"
+    j "How could you... You made me believe that {i}I KILLED HER{/i}"
 
-s "I had no other choice. There was no other way around this."
+    s "I'm sorry... I'm so sorry. I did what I can to protect you. I would've told you sooner if [b] she [/b] wasn't in the way."
 
-j "How could you... You made me believe that [i] I KILLED HER [/i]"
+    a "How could you manipulate my brother like that? He {i}LOVED{/i} you."
 
-s "I'm sorry... I'm so sorry. I did what I can to protect you. I would've told you sooner if [b] she [/b] wasn't in the way."
+    a "And you took advantaged of his kidness... you turned it into your own sadistic game."
 
-a "How could you manipulate my brother like that? He [i] LOVED [/i] you."
+    s "Stop talking...! This wouldn't have happened if it wasn't for you..."
 
-a "And you took advantaged of his kidness... you turned it into your own sadistic game."
+    a "No Scott. This wouldn't have happened if you didn't [b] spike her food [/b]"
 
-s "Stop talking...! This wouldn't have happened if it wasn't for you..."
+    s "You don't understand me at all."
 
-a "No Scott. This wouldn't have happened if you didn't [b] spike her food [/b]"
+    j "Did you do it?"
 
-s "You don't understand me at all."
+    #Scene change
+    s "It was our love that killed her...! Your laxatives and my cyanide. Our love killed her."
 
-j "Did you do it?"
+    a "Get away from us."
 
-#Scene change
-s "It was our love that killed her...! Your laxatives and my cyanide. Our love killed her."
+    s "WHY? I answered everything you asked me to. I did everything for you John, please tell her she's being unreasonable."
 
-a "Get away from us."
+    j "We need to go."
 
-s "WHY? I answered everything you asked me to. I did everything for you John, please tell her she's being unreasonable."
+    s "NO PLEASE!"
 
-j "We need to go."
+    "{i} John and Angel hurridely escapes the house. {/i}"
 
-s "NO PLEASE!"
 
-"[i] John and Angel hurridely escapes the house. [/i]"
+    "{i} Without a moment of hesitation, Scott quickly follows them. {/i}"
 
+    #play siren noises
 
-"[i] Without a moment of hesitation, Scott quickly follows them. [/i]"\
+    #scene changes to pollice end
 
-#play siren noises
+    officer "FREEZE! PUT YOUR HANDS IN THE AIR!"
 
-#scene changes to pollice end
+    Officer 2 "ANYTHING YOU CAN SAY CAN AND WILL BE AGAINST YOU IN THE COURT OF LAW!"
 
-officer "FREEZE! PUT YOUR HANDS IN THE AIR!"
+    "Shit..."
 
-Officer 2 "ANYTHING YOU CAN SAY CAN AND WILL BE AGAINST YOU IN THE COURT OF LAW!"
 
-"Shit..."
+label scotts_route:
 
+    a "John, what the f*ck are you saying? Do you see me? Look at what that PSYCHO did to me!"
 
-label Scotts Route
+    j "Angel, you've been against me from the start. How can I believe you now?"
 
-a "John, what the f*ck are you saying? Do you see me? Look at what that PSYCHO did to me!"
+    s "Angel, just stop. We're not going to believe you after all of your deception"
 
-j "Angel, you've been against me from the start. How can I believe you now?"
+    a "You're one to talk b*tch."
 
-s "Angel, just stop. We're not going to believe you after all of your deception"
+    j "ANGEL! That's enough."
 
-a "You're one to talk b*tch."
+    a "John, please, you have to believe me. I'm your sister, you can trust me when I tell you, Scott is not who he says he is."
 
-j "ANGEL! That's enough."
+    j "Stop talking Angel."
 
-a "John, please, you have to believe me. I'm your sister, you can trust me when I tell you, Scott is not who he says he is."
+    j "You have been trying to call the police since the beginning."
 
-j "Stop talking Angel."
+    j "You made us believe that you CARED about me by coming. Only to leave when it's most convenient."
 
-j "You have been trying to call the police since the beginning."
+    a "That's not it at all."
 
-j "You made us believe that you CARED about me by coming. Only to leave when it's most convenient."
+    s "Do you want me to shut her up dear?"
 
-a "That's not it at all."
+    j "..."
 
-s "Do you want me to shut her up dear?"
+    a "No no no please don't..."
 
-j "..."
+    a "John? You can believe me, right?"
 
-a "No no no please don't..."
+    j "..."
 
-a "John? You can believe me, right?"
+    s "Angel, you have been a burden since the beginning. You need to be quiet."
 
-j "..."
+    #Scott and angel both disappear
 
-s "Angel, you have been a burden since the beginning. You need to be quiet."
+    #followed by angel's scream
 
-#Scott and angel both disappear
+    #Scott comes back in frame
 
-#followed by angel's scream
+    s "SOrry about that my darling."
 
-#Scott comes back in frame
+    #Scene change cut scene Scott's route
 
-s "SOrry about that my darling."
+    j "..."
 
-#Scene change cut scene Scott's route
+    s "I know that this wasn't an easy decision to make."
 
-j "..."
+    j "Why did you killed her?"
 
-s "I know that this wasn't an easy decision to make."
+    s "Killing is such a harsh word... I only did what's needed to be done."
 
-j "Why did you killed her?"
+    j "By killing?"
 
-s "Killing is such a harsh word... I only did what's needed to be done."
+    s "She was a burden to our lives and a stain that needs to be removed."
 
-j "By killing?"
+    s "The second you came to my life, I knew I had to protect you."
 
-s "She was a burden to our lives and a stain that needs to be removed."
+    j "Is that why you killed your mom?"
 
-s "The second you came to my life, I knew I had to protect you."
+    s "It was our love that killed her."
 
-j "Is that why you killed your mom?"
+    s "Your funny laxatives and my toxic cyanide. We were made for each other."
 
-s "It was our love that killed her."
+    j "Was this planned since the beginning?"
 
-s "Your funny laxatives and my toxic cyanide. We were made for each other."
+    s "I knew no matter what happened, she would always be in the way. I wanted our happiness."
 
-j "Was this planned since the beginning?"
+    j "Weren't we happy before?"
 
-s "I knew no matter what happened, she would always be in the way. I wanted our happiness."
+    s "We were. Aren't we happier now?"
 
-j "Weren't we happy before?"
+    j "...I don't know."
 
-s "We were. Aren't we happier now?"
+    s "I don't know what will happen now, but as long as you're here, I'm okay."
 
-j "...I don't know."
+    s "Let's leave this prison together."
 
-s "I don't know what will happen now, but as long as you're here, I'm okay."
+    # - scene changes - 
 
-s "Let's leave this prison together."
+    #sounds of running door opening, sirens
 
-- #scene changes - 
+    "Officer: FREEZE! PUT YOUR HANDS IN THE AIR"
 
-#sounds of running door opening, sirens
+    "Officer 2: ANYTHING YOU CAN SAY CAN AND WILL BE AGAINST YOU IN THE COURT OF LAW"
 
-"Officer: FREEZE! PUT YOUR HANDS IN THE AIR"
-
-"Officer 2: ANYTHING YOU CAN SAY CAN AND WILL BE AGAINST YOU IN THE COURT OF LAW"
-
-"Shit..."
+    "Shit..."
