@@ -67,11 +67,15 @@ label start:
 
     # John, Angel, and Scott's POV of the front of the house
 
+    scene bg front_door_scene 1
+
     s "Are you guys ready?"
     j "...Mhm"
     a "Let's just meet the lady and get this over with"
 
     # knock knock knock sounds
+
+    scene bg door_scene2
 
     m "..."
     m "You've gained weight, Scott."
@@ -100,23 +104,44 @@ label start:
 
     #cutscene 1
 
+    scene bg kitchencutscene1
+
     "..."
+
+    scene bg kitchencutscene2
+
     "..."
+
+    scene bg kitchencutscene3
+
     "..."
+
+    scene bg kitchencutscene4
+
     "..."
+
+    scene bg kitchencutscene5
+
     "..."
+
+    scene bg kitchencutscene
+
+
     "..."
+
+    scene bg leadup
+
     "..." 
 
     #cutscene 2
 
     "..."
+scene bg kitchen
+
 
     #Switch to kitchen
+    scene bg kitchen
 
-    s "John? Are you okay??"
-    j "Yeah... I am."
-    a "The audacity of that b*tch"
     j "I'm sorry... I'm so sorry... I just ruin everything..."
     s "Stop that! You didn't ruin anything at all."
     s "I should be the one who should be sorry... after all these years, I thought she would change."
