@@ -278,6 +278,13 @@ label start:
     a "I always knew your stupid pranks were terrible, but this time you went too far!!"
     a "Scott's mother died from laxatives because of YOU!"
 
+    s "Well we don't know if she's actually dead!"
+
+    "Scott leaves the kitchen"
+
+    #scott comes back
+
+    s "Yeah she's dead."
     j "I didn't know it would go so far... People on reddit never mentioned it can kill a person.."
     a "YOU'RE TAKING THESE IDEAS FROM REDDIT????"
     j "I didn't mean for this to happen!"
