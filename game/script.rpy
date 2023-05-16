@@ -488,25 +488,23 @@ label letter_scene:
 
     "If you're seeing this, then I'm already gone. There's no reason for me to stay. I've decided to run away because..."
 
-    #     menu: 
-    #         "life has been miserable, I needed to go."
-                
-        
-    #     menu: 
-    #         "I have found a new chance at life, with someone else."
-        
-    #     menu:
-    #         "No one will notice if I disappeared"
-    # "This was not an easy decision to make. Although I am certain this is the path I am willing to take. If you read this letter..."
+    menu: 
+        "life has been miserable, I needed to go.":
+            pass
+        "I have found a new chance at life, with someone else.":
+            pass
+        "No one will notice if I disappeared":
+            pass
+    
+    "This was not an easy decision to make. Although I am certain this is the path I am willing to take. If you read this letter..."
 
-    #     menu
-    #         "don't bother trying to find me."
-        
-    #     menu:
-    #         "discard this letter and live your own life."
-
-    #     menu:
-    #         "Keep this letter private between us."
+    menu:
+        "don't bother trying to find me.":
+            pass
+        "discard this letter and live your own life.":
+            pass
+        "Keep this letter private between us.":
+            pass
         
     "There's not much else to say. I don't plan on being found, so don't look for me."
     "Goodbye."
@@ -632,16 +630,11 @@ label letter_scene:
 
     s "Why would he not listen to you? Angel was only thinking of saving herself, she was going to cut you off, remember? I would never do that to you. I can't lose you. We're in this together."
 
-    # menu:
-    #     "I trust you Angel."
-    #         jump angels_route
-
-
-    # menu:
-    #     "I believe you Scott."
-    #         jump scotts_route
-    
-    return
+    menu:
+        "I trust you Angel.":
+            jump angels_route
+        "I believe you Scott.":
+            jump scotts_route
 
 label angels_route:
 

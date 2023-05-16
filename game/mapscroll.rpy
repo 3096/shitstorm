@@ -15,12 +15,6 @@ python early:
                     'width': 0.1,
                     'height': 0.1,
                 },
-                'gloves': {
-                    'x': 0.1,
-                    'y': 0.5,
-                    'width': 0.1,
-                    'height': 0.1,
-                },
                 'bleach': {
                     'x': 0.5,
                     'y': 0.1,
@@ -31,6 +25,14 @@ python early:
         },
         'garden': {
             'left': 'kitchen',
+            'items': {
+                'gloves': {
+                    'x': 0.1,
+                    'y': 0.5,
+                    'width': 0.1,
+                    'height': 0.1,
+                }
+            }
         },
         'bathroom_door': {
             'up': 'bathroom',
@@ -66,6 +68,7 @@ python early:
 
     def pick_up_item(current_map, item_name, items_needed):
         items_needed[item_name] = False
+        del maps[current_map]['items'][item_name]
         if not any(items_needed.values()):
             return 0
         else:
