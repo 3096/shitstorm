@@ -135,8 +135,8 @@ label start:
 
     #cutscene 2
 
-    "..."
-scene bg kitchen
+   
+    scene bg kitchen
 
 
     #Switch to kitchen
@@ -167,13 +167,108 @@ scene bg kitchen
     j "Let's just put a small dosage into her food. She won't suspect anything!"
     s "Sure, let's do it."
     a "...fine. I'll only look out for you."
+    scene bg leadup1
+    "..."
 
+    a "She's coming."
     #scene changes - kitchen
     # sprites show
+    scene bg kitchen
+    "Mother in law enters the scene"
 
+    s "Mother, apologize to John."
+
+    m "Are you telling me what to do?"
+
+    s "Mother. You hurt John. And you hurt me. I can't continue contact if you're going to hurt the people I love."
+
+    m "Scott, please, you're being dramatic right now."
+
+    s "Excuse me?"
+
+    m "We both know it's not true."
+
+    m "I don't know if you're trying to fool yourself, but it's quite pathetic."
+    m "You can have your little boy toys and short ones, but you'll always come back to me."
+
+    j "Please don't talk to Scott like that..."
+
+    m "Can't hear you over your mumbling, SPEAK UP."
+
+    j "I...think we left off on a bad footing."
+
+    j "Why don't we sit down and eat Scott's delicious food?"
+
+    a "Yeah, wouldn't you love some... delicious food."
+
+    s "Have a seat mother."
+
+    m "Very well, only because you've made your mother's favorite, Osso Buco"
+
+    s "Don't you deserve the best?"
+
+    "Everyone settles down in their seat"
+
+    m "It's such a shame that mark on your face had faded so quickly. I would've enjoyed this meal a lot more..."
+
+    j "..."
+
+    s "How is the food mother?"
+
+    m "You know? It's quite delectable."
+
+    m "Though, it's unusually bitter."
+
+    "*Grumbling noise*"
+
+    m "You have to excuse me..."
+
+    "Mother in law leaves"
+
+    "Everyone bursts into laughter"
+
+    a "That sh*thead doesn't know what's coming"
+
+    j "Do you think I went too far...?"
+
+    s "Did you hear her sadistic tone, John?"
+
+    j "She's still your mom."
+
+    s "Was."
+
+    "Moment passes"
+
+    a "She's been gone for quite some while.."
+
+    j "I think it's gone too far, we need to check up on her."
+
+    s "I'll go. You've been through enough today."
+
+    j "Okay..."
+
+    "Silence..."
+
+    j "Scott's been gone for a while too. Do you think he's okay?"
+
+    a "He's probably trying to help her not sh*t her pants."
+
+    j "We should go check up on them."
+
+    scene bg bathroom_door
+
+    "John and Angel leave to find Scott and Mother in Law"
+
+    "Mother in law is unconcious"
+
+    "John slowly faints"
+    with pixellate
     #GAME START
+    scene bg kitchen
 
     s "Oh good, you're awake."
+    scene bg kitchen
+
     j "What... happened?"
         
     s "Okay, don't freak out but..."
