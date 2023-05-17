@@ -278,6 +278,7 @@ label start:
     a "I always knew your stupid pranks were terrible, but this time you went too far!!"
     a "Scott's mother died from laxatives because of YOU!"
 
+
     s "Well we don't know if she's actually dead!"
 
     "Scott leaves the kitchen"
@@ -422,6 +423,8 @@ label start:
     #After player collects everything 
     #scene changes to the front of the bathroom/cutscene
 
+    scene bg bathroom_door
+
     s "Okay, now that we have everything let's head back to the bathroom."
 
     a "Is he... crying?"
@@ -453,16 +456,26 @@ label start:
     s "You have nothing to apologize for. It's okay... I don't want you to face this alone. "
 
     j "It's fine. I have to deal with the mess I made."
-
+    with dissolve
     #cut scene
+
+    scene bg bathroomscene1
 
     j "{i}What am I doing? {/i}"
 
+    scene bg bathroomscene2
+
     j "How did I get to this point? It was suppose to be a prank but now I'm a murderer."
+
+    scene bg bathroomscene3
 
     j "And I dragged Scott and Angel into my mess too..."
 
+    scene bg bathroomscene4
+
     j "Oh god, Scott... I can't believe I did this to him. He's been so good to me."
+
+    scene bg bathroomscene5
 
     j "He still loved me when I was at my worst. I thought I became better for him... but now... nothing changes."
 
@@ -470,20 +483,29 @@ label start:
 
     #Scott knocks
 
+    scene bg bathroomscene6
+
     j "I never changed. I can't change. How can he ever forgive me?"
 
+    scene bg bathroomscene7
+
+    play audio 'audio/sound knock.mp3'
     s "Hey are you okay in there?"
 
     #(heavy breathing)
 
-    j "I'm fine..! I'm doing okay.. Don't come in here, I got it."
+    scene bg bathroom
 
+    j "I'm fine..! I'm doing okay.. Don't come in here, I got it."
     #change scenes
 
     #Scott comes in anyways, concerned for John
 
     #Scott is behind John, facing the mirror, Scott is reflected on the left side of John's shoulder.
 
+    play audio 'audio/sound door_open.mp3' 
+    stop audio fadeout 0.5
+   
     s "John? Are you okay? What's happening?"
 
     j "I already told you, I'm fine. Please leave me alone."
@@ -494,7 +516,7 @@ label start:
 
     s "What? What are you saying John?"
 
-    j "She's dead now because of me. I never meant to hurt you. I always ruin things, btu I never wanted to ruin things with you. I'm not good enough for you. I don't know why you're still here."
+    j "She's dead now because of me. I never meant to hurt you. I always ruin things, but I never wanted to ruin things with you. I'm not good enough for you. I don't know why you're still here."
 
     s "John stop it... You didn't ruin things with me and you won't. I will always love you."
 
@@ -502,7 +524,41 @@ label start:
 
     s "Don't tell me who I should love. I only want you in my life. We will get through this together."
 
-    s "Let's clean up"
+    j "Why are you like this?"
+
+    s "What do you mean?"
+
+    j "{b} I killed her. {/b}"
+
+    j "I killed her. And now she's dead."
+
+    j "Why are you acting like that didn't happen? Like I did a minor mistake?"
+
+    s "John, to be totally honest."
+
+    s "I'm{b}really terrified {/b}."
+
+    s "I don't know what's going to happen to us, but all I know is that I want to protect you..."
+
+    s "It seems really silly, but you're precious to me."
+
+    s "My mother was never the best to me. I just want us to all move on."
+
+    s "I know my reaction doesn't seem normal... but I've mourned a long time ago"
+
+    "{i} What does he mean by that? {/i}"
+
+    s "As long as you're safe, that's all that matters."
+
+    j "Really?"
+
+    s "Of course. I love you."
+
+    j "I love you too..."
+
+
+
+    s "Let's clean up together, okay?"
 
     j "Okay.."
 
@@ -522,15 +578,21 @@ label start:
 
     j "..."
 
+    scene bg phonescene1
+
     j "Let me pull up reddit real quick"
 
     a "Oh god."
+
+    scene bg phonescene2
 
     s "I trust you honey!"
 
     a "Oh god."
 
     #cutscene reddit
+    scene bg phonescene3
+
     "{i}JohnPoe: Where to hide (fake) body to scare MIL?{/i}"
     "{i}Hey guys, so I want to do a funny prank on my MIL by hiding this fake body bag around my house. She’s coming home soon lol so I need to find a place around my house quickly. Do you guys know the best spot?{/i}"
     
@@ -551,13 +613,17 @@ label start:
 
     s "No, that's not good either"
 
+    a "Ouch look at all that downvotes..."
+
     "NotaKiller: Garden? Normally that's a good spot to hide actual bodies, so why not a fake one? uwu"
     "ThrowAway68: agree"
-    "DrPiper: lowkey sus - r u a murderer?"
+    "DrFBI: lowkey sus - r u a murderer?"
 
     j "This last one might work... There was a greenhouse here."
 
     #Cutscene end
+
+    scene bg bathroom_door
 
     a "Do we even have the supplies to even pull it off?"
 
@@ -581,11 +647,15 @@ label start:
 
     #NEW OBJ Find tools to hide body
 
-    j "Okay, let's do this. I should ho get the cord from the bedroom first."
+    j "Okay, let's do this. I should get the cord from the bedroom first."
 
     #player enters the bedroom and grabs cord, automatically triggers dialogue - note John and Scott are in the room 
 
+    scene bg closet
+
     j "I got the cables. Now we just need to get the rest."
+
+    scene bg mil_room
 
     s "After this, we can pretend like none of this ever happened. We can move on and live peacfully"
 
@@ -609,19 +679,21 @@ label start:
 
     a "I won't do that. It's a federal crime."
 
-    s "What's one more felony? At thispoiny, it can't be worse than murder."
+    s "What's one more felony? At this point, it can't be worse than murder."
 
     j "Scott's right. We're already in too deep."
 
-    a "...fine. But after this is a;; over, I'm never talking to you again."
+    a "...fine. But after this is all over, I'm never talking to you again."
 
     j "Angel, you don't mean that right?"
 
-    a "They were rught about cutting you off. I should've listened to them. I shouldn't have come here."
+    a "They were right about cutting you off. I should've listened to them. I shouldn't have come here."
 
     j "..."
 
 label letter_scene:
+
+    scene bg desk
 
     "If you're seeing this, then I'm already gone. There's no reason for me to stay. I've decided to run away because..."
 
@@ -648,11 +720,15 @@ label letter_scene:
 
     #Resumes
 
+    scene bg mil_room
+
     s "Now let's do the rest... We need fertilizer and a shovel."
 
     j "Both should be in the garden."
 
     #Fertilizer is found in green house
+
+    scene bg garden
 
     j "... organic fertilizer"
 
@@ -690,6 +766,11 @@ label letter_scene:
 
     #Play audio scream
 
+    scene bg garden
+
+    play audio 'audio/sound angel_scream.mp3'
+    "{i} A familiar scream echoes inside the house {/i}"
+
     j "What was that? Angel??"
 
     j "I think the screams came from the bedroom. I should check it out and see if she's okay."
@@ -698,14 +779,19 @@ label letter_scene:
 
     #if anywhere else
 
+    scene bg kitchen
+
     "No... not here. I think the screams are coming from the bedroom."
 
     #When player reaches the bedroom
 
     #I hear her in the closet..
 
-    "{i}Click on the closet{/i}"
+    
 
+    scene bg mil_room
+
+    play audio 'audio/sound door_rattling.mp3'
     j "Damn. The door's locked."
 
     j "Angel, it's me. Are you okay?"
@@ -724,9 +810,9 @@ label letter_scene:
     j "But... I heard a scream... I need to see for myself that she's okay."
 
     s "She REALLY needs some space right now John"
-
     #Thuds sound
 
+    play audio 'audio/sound thud.mp3'
     "{i}Thuds against the door"
 
     j "That's definitely not okay. Angel???"
@@ -734,9 +820,9 @@ label letter_scene:
     s "..."
 
     j "Scott? What's going on??"
-
     #Screaming
 
+    play audio 'audio/sound angel_curse.mp3'
     "{i}Angel Screaming{/i}"
 
     a "LET ME OUT MOTHER F*CKER!!!"
@@ -744,7 +830,7 @@ label letter_scene:
     s "Sh*t..."
 
     j "Angel??"
-
+    play audio 'audio/sound door_kick.mp3'
     "{i}Angel kicks open the door to reveal she had been tied up and looked roughed{/i}"
 
     a "YOU B*TCH!"
@@ -782,9 +868,13 @@ label angels_route:
     s "Okay... I'll give you some space. But please, reconsider this."
 
     #Kitchen scene
+    with dissolve
     "{i}John and ANgel leaves to the kitchen{/i}"
 
+
     a "I'm sorry."
+    scene bg kitchen
+
 
     j "There's nothing to be sorry about."
 
@@ -835,6 +925,7 @@ label angels_route:
 
     #Audio plays thuds
     "{i}THUDS{/i}"
+    play audio 'audio/sound thud.mp3'
 
     s "John. Don't listen to her."
 
@@ -848,7 +939,7 @@ label angels_route:
 
     s "And she still tried to call the police after everything we've been through."
 
-    s "Only reason she stopped in the beginning was because [b] she knew [/b] she was part of this mess."
+    s "Only reason she stopped in the beginning was because {b} she knew {/b} she was part of this mess."
 
     a "I'm tired of running away. I'm tired of hiding our mistakes. We need to take this head on."
 
@@ -856,7 +947,7 @@ label angels_route:
 
     j "Scott, did you kill her?"
 
-    s "Honey, listen to me. I would [b] NEVER [/b] hurt you like Angel did."
+    s "Honey, listen to me. I would {b} NEVER {/b} hurt you like Angel did."
 
     s "I don't know what I would do without you!"
 
@@ -876,9 +967,11 @@ label angels_route:
 
     #scene changes angel route
 
+    scene bg angel_route
+
     s "Please... You don't mean that, do you?"
 
-    j "I do. No matter how much I love you, I[b] cannot [/b] trust you."
+    j "I do. No matter how much I love you, I{b} cannot {/b} trust you."
 
     s "I did this for you. Everything I did was for you."
 
@@ -892,7 +985,7 @@ label angels_route:
 
     j "How could you... You made me believe that {i}I KILLED HER{/i}"
 
-    s "I'm sorry... I'm so sorry. I did what I can to protect you. I would've told you sooner if [b] she [/b] wasn't in the way."
+    s "I'm sorry... I'm so sorry. I did what I can to protect you. I would've told you sooner if {b} she {/b} wasn't in the way."
 
     a "How could you manipulate my brother like that? He {i}LOVED{/i} you."
 
@@ -900,7 +993,7 @@ label angels_route:
 
     s "Stop talking...! This wouldn't have happened if it wasn't for you..."
 
-    a "No Scott. This wouldn't have happened if you didn't [b] spike her food [/b]"
+    a "No Scott. This wouldn't have happened if you didn't {b} spike her food {/b}"
 
     s "You don't understand me at all."
 
@@ -926,11 +1019,16 @@ label angels_route:
 
     #scene changes to pollice end
 
-    officer "FREEZE! PUT YOUR HANDS IN THE AIR!"
+    scene bg ending
 
-    Officer 2 "ANYTHING YOU CAN SAY CAN AND WILL BE AGAINST YOU IN THE COURT OF LAW!"
+    "{i}FREEZE! PUT YOUR HANDS IN THE AIR!{/i}"
+
+    "{i}ANYTHING YOU CAN SAY CAN AND WILL BE AGAINST YOU IN THE COURT OF LAW!{/i}"
 
     "Shit..."
+
+    return
+
 
 
 label scotts_route:
@@ -967,13 +1065,21 @@ label scotts_route:
 
     s "Angel, you have been a burden since the beginning. You need to be quiet."
 
-    #Scott and angel both disappear
+    a "John, please help me."
 
-    #followed by angel's scream
+    j "..."
+
+    a "I know you're still in there."
+
+    "{i} Scott and angel both disappear into the closet {/i}"
+    play audio 'audio/sound angel_scream.mp3'
+    " {i}followed by angel's scream {/i}"
 
     #Scott comes back in frame
 
-    s "SOrry about that my darling."
+    scene bg scott_route
+
+    s "Sorry about that my darling."
 
     #Scene change cut scene Scott's route
 
@@ -999,6 +1105,8 @@ label scotts_route:
 
     j "Was this planned since the beginning?"
 
+    scene bg mil_room
+
     s "I knew no matter what happened, she would always be in the way. I wanted our happiness."
 
     j "Weren't we happy before?"
@@ -1007,16 +1115,91 @@ label scotts_route:
 
     j "...I don't know."
 
+    s "That's okay that you don't know. I'll be here to support and guide you."
+
+    j "I know I've asked this before... but why me?"
+
+    s "What do you mean?"
+
+    j "You answered it before but now I don't know if that's even true."
+
+    s "All I've said about you has been truthful."
+
+    s "I never wanted to hurt you... I'm sorry for holding the truth in until now."
+
+    s "Do you remember the first time we met?"
+
+    j "Yeah, can't exactly forget someone who stopped my notorious pranks."
+
+    j "You were the kindest person in the student body. You helped me get out trouble more than I would like back then."
+
+    s "Not exactly the first time..."
+
+    j "Have we met before that?"
+
+    s "It was back in junior high, I didn't have a good life at home and school wasn't exactly my safe haven either."
+
+    s "Every day I gave myself reasons to be here, until one day I couldn't find any."
+
+    s "Moments before what could've been the end, you {b}saved me{/b}."
+    
+    s "Even when you didn't know it, you saved me."
+
+    j "..."
+
+    s "You came up to me and gave me my blazers."
+
+    s "You noticed I left without it and you searched the entire campus to find me..."
+
+    s "You didn't even know me."
+
+    s "Your act of kindness towards me was a lot more than what my mother had given me my entire life."
+
+    j "I didn't know that."
+
+    s "It's okay, I don't hold it against you."
+
+    s "When you came into my life, it was almost as if fate had wanted our lives to intercept."
+
+    s "You were my light that I needed to protect."
+
+    j "Is that why you killed them?"
+
+    s "I was hurting for a very long time before I met you. I don't want either of us to ever experience what I felt."
+
+    s "They were an interference to our happy lives."
+
+    s "They had to go."
+
+    j "Isn't that selfish? To live that way?"
+
+    s "I don't see why it's selfish to be happy."
+
+    s "Why should I live for others who treats me like sh*t when they can?"
+
+    j "You're right."
+
+    j "{b} I love you {/b}"
+
+    s "And I love you the most my dear."
+
     s "I don't know what will happen now, but as long as you're here, I'm okay."
 
     s "Let's leave this prison together."
 
+    "{i} John and Scott both embrace each other lovingly"
+    "{i} Leaving the Charmin House locking each other's arm"
+
     # - scene changes - 
 
     #sounds of running door opening, sirens
+
+    scene bg ending
 
     "Officer: FREEZE! PUT YOUR HANDS IN THE AIR"
 
     "Officer 2: ANYTHING YOU CAN SAY CAN AND WILL BE AGAINST YOU IN THE COURT OF LAW"
 
     "Shit..."
+
+return 
