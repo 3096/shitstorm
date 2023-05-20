@@ -124,16 +124,19 @@ label start:
 
     "..."
 
-    scene bg kitchencutscene
+    scene bg kitchencutscene6
 
 
     "..."
 
-    scene bg leadup
+    scene bg kitchencutscene7
 
     "..." 
 
     #cutscene 2
+    scene bg leadup
+
+    "..."
 
    
     scene bg kitchen
@@ -141,31 +144,94 @@ label start:
 
     #Switch to kitchen
     scene bg kitchen
+    
+    show j neutral 
 
     j "I'm sorry... I'm so sorry... I just ruin everything..."
+
+    hide j neutral
+
+    show s neutral
+
     s "Stop that! You didn't ruin anything at all."
     s "I should be the one who should be sorry... after all these years, I thought she would change."
     s "She never did."
 
+    hide s neutral
+
+    show a neutral
+
     a "Honestly f*ck that b*tch."
+
+    hide a neutral
+
+    show j neutral
+
     j "Please... Angel... She might hear us."
+
+    hide j neutral
+    show a neutral
     a "I'm not gonna apologize for that if SHE CAN HEAR US!! Scott is making such a nice dinner for us and she wanted to repay that BY SLAPPING YOU?"
+   
+    hide a neutral
+    show j neutral
+
     j "There's not much we can do here..."
 
+    hide j neutral
+    show a neutral
     a "Honestly, if that's how she treats people cooking her a meal, I bet there's a ton more at resturants that are just spitting in her food."
+    
+    hide a neutral
+    show j neutral
+
     j "Why don't we teach her a lesson?"
+
+    hide j neutral
+    show a neutral
+
     a "You don't mean..."
+
+    hide a neutral
+    show j neutral
     j "It'll just be like good ol' times.. All over again..!"
     j "It'll be harmless like those pranks that get views on the internet."
 
+    hide j neutral
+    show a neutral
     a "No way man, that's Scott's mother you're talking about. She's sh*tty but we can't be that petty. We're not little kids anymore."
+
+    hide a neutral
+    show s neutral
     s "She did hurt John... She's no mother of mine anymore."
 
+    hide s neutral
+    show a neutral
+
     a "..."
+
+    hide a neutral
+    show j neutral
+
     j "Sh*tty... like laxatives!"
+
+    hide j neutral
+    show a neutral
+
     a "Sorry what now?"
+
+    hide a neutral
+    show j neutral
+
     j "Let's just put a small dosage into her food. She won't suspect anything!"
+
+    hide j neutral
+    show s neutral
+
     s "Sure, let's do it."
+
+    hide s neutral
+    show a neutral
     a "...fine. I'll only look out for you."
     scene bg leadup1
     "..."
@@ -176,84 +242,171 @@ label start:
     scene bg kitchen
     "Mother in law enters the scene"
 
+    show s neutral
     s "Mother, apologize to John."
+
+    hide s neutral
+    show m neutral
 
     m "Are you telling me what to do?"
 
+    hide m neutral
+    show s neutral
+
     s "Mother. You hurt John. And you hurt me. I can't continue contact if you're going to hurt the people I love."
 
+    hide s neutral
+    show m neutral
+    
     m "Scott, please, you're being dramatic right now."
 
+    hide m neutral
+    show s neutral
     s "Excuse me?"
+
+    hide s neutral
+    show m neutral
 
     m "We both know it's not true."
 
     m "I don't know if you're trying to fool yourself, but it's quite pathetic."
     m "You can have your little boy toys and short ones, but you'll always come back to me."
 
+    hide m neutral
+    show j neutral
+
     j "Please don't talk to Scott like that..."
 
+    hide j neutral
+    show m neutral
+
     m "Can't hear you over your mumbling, SPEAK UP."
+
+    hide m neutral
+    show j neutral
 
     j "I...think we left off on a bad footing."
 
     j "Why don't we sit down and eat Scott's delicious food?"
 
+    hide j neutral
+    show a neutral
     a "Yeah, wouldn't you love some... delicious food."
+
+    hide a neutral
+    show s neutral
 
     s "Have a seat mother."
 
+    hide s neutral
+    show m neutral
+
     m "Very well, only because you've made your mother's favorite, Osso Buco"
+
+    hide m neutral
+    show s neutral
 
     s "Don't you deserve the best?"
 
     "Everyone settles down in their seat"
 
+    hide s neutral
+    show m neutral
+
     m "It's such a shame that mark on your face had faded so quickly. I would've enjoyed this meal a lot more..."
+
+    hide m neutral
+    show j neutral
 
     j "..."
 
+    hide j neutral
+    show s neutral
+
     s "How is the food mother?"
 
-    m "You know? It's quite delectable."
+    hide s neutral
+    show m neutral
+    m "Disappointing. Though, you can't do better than your mother."
 
-    m "Though, it's unusually bitter."
+    m "It's unusually bitter."
 
     "*Grumbling noise*"
 
     m "You have to excuse me..."
 
+    hide m neutral
+
     "Mother in law leaves"
 
     "Everyone bursts into laughter"
 
+    show a neutral
+
     a "That sh*thead doesn't know what's coming"
+
+    hide a neutral
+    show j neutral
 
     j "Do you think I went too far...?"
 
+    hide j neutral
+    show s neutral
+
     s "Did you hear her sadistic tone, John?"
+
+    hide s neutral
+    show j neutral
 
     j "She's still your mom."
 
-    s "Was."
+    hide j neutral
+    show s neutral
+
+    s "Was. After hurting you, she's no longer my mother."
+
+    hide s neutral
 
     "Moment passes"
 
+    show a neutral
+
     a "She's been gone for quite some while.."
+
+    hide a neutral
+    show j neutral
 
     j "I think it's gone too far, we need to check up on her."
 
+    hide j neutral
+    show s neutral
+
     s "I'll go. You've been through enough today."
+
+    hide s neutral
+    show j neutral
 
     j "Okay..."
 
+    hide j neutral
+
     "Silence..."
+
+    show j neutral
 
     j "Scott's been gone for a while too. Do you think he's okay?"
 
+    hide j neutral
+    show a neutral
+
     a "He's probably trying to help her not sh*t her pants."
 
+    hide a neutral
+    show j neutral
+
     j "We should go check up on them."
+
+    hide j neutral
 
     scene bg bathroom_door
 
@@ -266,54 +419,136 @@ label start:
     #GAME START
     scene bg kitchen
 
+    show s neutral
+
     s "Oh good, you're awake."
     scene bg kitchen
 
+    hide s neutral
+    show j neutral
+
     j "What... happened?"
+
+    hide j neutral
+    show s neutral
         
     s "Okay, don't freak out but..."
 
+    hide s neutral
+    show a neutral
+
     a "YOU FUCKING KILLED HER"
+
+    hide a neutral
+    show j neutral
+
     j "Wait, what???"
+
+    hide j neutral
+    show a neutral
     a "I always knew your stupid pranks were terrible, but this time you went too far!!"
     a "Scott's mother died from laxatives because of YOU!"
 
 
+    hide a neutral
+    show s neutral
+
     s "Well we don't know if she's actually dead!"
+
+    hide s neutral
 
     "Scott leaves the kitchen"
 
     #scott comes back
 
+    show s neutral
     s "Yeah she's dead."
+
+    hide s neutral
+    show j neutral
+
     j "I didn't know it would go so far... People on reddit never mentioned it can kill a person.."
+
+    hide j neutral
+    show a neutral
+
     a "YOU'RE TAKING THESE IDEAS FROM REDDIT????"
+
+    hide a neutral
+    show j neutral
+
     j "I didn't mean for this to happen!"
+
+    hide j neutral
+    show s neutral
+
     s "Alright guys, let's all calm down for now."
 
+    hide s neutral
+    show a neutral
+
     a "CALM DOWN?? YOUR MOTHER IS DEAD, YOUR BOYFRIEND MURDERED HER! AND YOU WANT US TO CALM DOWN?"
+
+    hide a neutral
+    show j neutral
+
     j "Oh god... Scott.. I'm so sorry."
+
+    hide j neutral
+    show s neutral
+
     s "Hey, it's okay, you didn't mean for this to happen. It was an accident!"
+
+    hide s neutral
+    show a neutral
 
     a "His \"accident\"..." 
     a "IS CALLED MANSLAUGHTER"
     a "We need to go to the police."
 
+    hide a neutral
+    show j neutral
+
     j "Police? No no no.. Please don't..!"
     j "I didn't mean for this to happen..! I don't want to go to jail! Please don't.."
-    s "You can can call the police if you want, but just remember you'll ALSO have to face the consequences too."
+
+    hide j neutral
+    show s neutral
+
+    s "No one is going to call the police."
+    s  "Angel just remember, you'll ALSO have to face the consequences too."
     s "We're all accomplices here."
+
+    hide s neutral
+    show a neutral
+
     a "..."
-    s"We have to do something about this that DOESN'T involve the police."
+
+    hide a neutral
+    show s neutral
+
+    s "We have to do something about this that DOESN'T involve the police."
+
+    hide s neutral
+    show j neutral
 
     j "... Where do you guys keep the cleaning supplies?"
+
+    hide j neutral
+    show a neutral
+
     a "Why?"
+
+    hide a neutral
+    show j neutral
     
     j "We need to hide the body."
 
     #Cover the body segment
 
     j "First thing's first, let's cover her body with something.."
+    hide j neutral
+    show s neutral
     s "Well, We do have a tarp somewhere in the garden."
 
     #Navigation tool highlights
