@@ -641,18 +641,13 @@ label start:
     j "We need gloves to cover our fingerprints.. "
     hide j neutral
     menu:
-        "Bleach":
+        "Bleach and hydrogen peroxide":
             pass
     show j neutral
     j "Some bleach would help remove the blood stains but hydrogen peroxide gets rid of the blood stains under UV light"
+    
     hide j neutral
-
-    menu:
-        "Mop":
-            pass
-    show j neutral
-    j "We need a mop too."
-    hide j neutral  
+ 
 
     show a neutral
     a "You sound a bit too prepared for this..."
@@ -663,6 +658,8 @@ label start:
 
     #Gloves
 
+    #MAP SCROLL - Gloves
+
     show j neutral
     j "The gloves are on the table to my right... Easy find"
     hide j neutral
@@ -671,6 +668,8 @@ label start:
 
     show j neutral
     j "I found the gloves"
+
+    #END MAP SCROLL
 
     j "Now we need the bleach and hydrogen peroxide."
 
@@ -703,9 +702,10 @@ label start:
     #if player picks up bleach
 
     hide s neutral
-    show j neutral
-    
 
+    #MAP SCROLL - BLEACH AND HYDROGEN PEROXIDE
+
+    show j neutral
     j "Here's the bleach.."
 
     show a neutral
@@ -723,7 +723,7 @@ label start:
     s "Who knew those true crimes show paid off?"
     hide s neutral
 
-    
+    #END MAP SCROLL
 
     #After player collects everything 
     #scene changes to the front of the bathroom/cutscene
@@ -1096,6 +1096,8 @@ label start:
 
     #NEW OBJ Find tools to hide body
 
+    #MAP SCROLL - cables 
+
     "{i} New Objective: Find tools to hide body {/i}"
 
     show j neutral
@@ -1105,8 +1107,7 @@ label start:
     hide j neutral
 
     #player enters the bedroom and grabs cord, automatically triggers dialogue - note John and Scott are in the room 
-
-    scene bg closet
+    #MAP SCROLL END
 
     show j neutral
     
@@ -1245,6 +1246,11 @@ label letter_scene:
 
     hide j neutral
 
+    "{i} Continued Objective: Find remaining tools {/i}"
+
+    #MAP SCROLL - Fertilizer and Shovel
+
+
     #Fertilizer is found in green house
 
     scene bg garden
@@ -1273,6 +1279,8 @@ label letter_scene:
     hide j neutral
 
     #After pickig up the item
+
+    #MAP SCROLL END
 
     #Scene in green house
 
