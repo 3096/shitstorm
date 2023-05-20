@@ -690,8 +690,11 @@ label start:
     j "Where would she put it?"
 
     hide j neutral
+
     show s neutral
     s "If I can remember... It should be somewhere in the kitchen"
+
+    
 
     #Scene change/player goes to kitchen 
     #if player picks the bottom cabinet (take ref from diagram)
@@ -699,8 +702,9 @@ label start:
 
     #if player picks up bleach
 
+    hide s neutral
     show j neutral
-    hide j neutral
+    
 
     j "Here's the bleach.."
 
