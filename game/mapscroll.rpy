@@ -1,6 +1,6 @@
 init:
-    transform buttonzoom:
-        zoom 0.16
+    transform buttonzoom(level=0.16):
+        zoom level
 
 python early:
     maps = {
@@ -12,14 +12,12 @@ python early:
                 'hydrogenperoxide': {
                     'x': 0.5,
                     'y': 0.5,
-                    'width': 0.1,
-                    'height': 0.1,
+                    "zoom": 0.16
                 },
                 'bleach': {
                     'x': 0.5,
                     'y': 0.1,
-                    'width': 0.1,
-                    'height': 0.1,
+                    "zoom": 0.16
                 },
             }
         },
@@ -27,10 +25,14 @@ python early:
             'left': 'kitchen',
             'items': {
                 'gloves': {
-                    'x': 0.1,
-                    'y': 0.5,
-                    'width': 0.1,
-                    'height': 0.1,
+                    'x': 0.75,
+                    'y': 0.69,
+                    "zoom": 0.16
+                },
+                'tarp': {
+                    'x': 0.0,
+                    'y': 1.1,
+                    "zoom": 0.7
                 }
             }
         },
@@ -116,4 +118,4 @@ screen mapscroll_screen(current_map, items_needed):
                         action Function(pick_up_item, current_map, item_name, items_needed)
                     else:
                         pass  # TODO: tell john he's stupid
-                    at buttonzoom
+                    at buttonzoom(item_info['zoom'])

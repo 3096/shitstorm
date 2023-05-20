@@ -8,7 +8,10 @@ define a = Character('Angel Doe', color = "#4b1bb3")
 define s = Character('Scott Charmin', color ="#750d12")
 define m = Character("Mother in Law")
 
-
+init:
+    transform character_transform:
+        xcenter 0.0
+        xpos 0.5
 
 # The game starts here.
 
@@ -146,13 +149,13 @@ label start:
     #Switch to kitchen
     scene bg kitchen
     
-    show j neutral 
+    show j neutral at character_transform 
 
     j "I'm sorry... I'm so sorry... I just ruin everything..."
 
     hide j neutral
 
-    show s neutral
+    show s neutral at character_transform
 
     s "Stop that! You didn't ruin anything at all."
     s "I should be the one who should be sorry... after all these years, I thought she would change."
@@ -160,79 +163,79 @@ label start:
 
     hide s neutral
 
-    show a neutral
+    show a neutral at character_transform
 
     a "Honestly f*ck that b*tch."
 
     hide a neutral
 
-    show j neutral
+    show j neutral at character_transform
 
     j "Please... Angel... She might hear us."
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
     a "I'm not gonna apologize for that if SHE CAN HEAR US!! Scott is making such a nice dinner for us and she wanted to repay that BY SLAPPING YOU?"
    
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "There's not much we can do here..."
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
     a "Honestly, if that's how she treats people cooking her a meal, I bet there's a ton more at resturants that are just spitting in her food."
     
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Why don't we teach her a lesson?"
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "You don't mean..."
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
     j "It'll just be like good ol' times.. All over again..!"
     j "It'll be harmless like those pranks that get views on the internet."
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
     a "No way man, that's Scott's mother you're talking about. She's sh*tty but we can't be that petty. We're not little kids anymore."
 
     hide a neutral
-    show s neutral
+    show s neutral at character_transform
     s "She did hurt John... She's no mother of mine anymore."
 
     hide s neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "..."
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Sh*tty... like laxatives!"
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "Sorry what now?"
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Let's just put a small dosage into her food. She won't suspect anything!"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Sure, let's do it."
 
     hide s neutral
-    show a neutral
+    show a neutral at character_transform
     a "...fine. I'll only look out for you."
     scene bg leadup1
     "..."
@@ -243,30 +246,30 @@ label start:
     scene bg kitchen
     "Mother in law enters the scene"
 
-    show s neutral
+    show s neutral at character_transform
     s "Mother, apologize to John."
 
     hide s neutral
-    show m neutral
+    show m neutral at character_transform
 
     m "Are you telling me what to do?"
 
     hide m neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Mother. You hurt John. And you hurt me. I can't continue contact if you're going to hurt the people I love."
 
     hide s neutral
-    show m neutral
+    show m neutral at character_transform
     
     m "Scott, please, you're being dramatic right now."
 
     hide m neutral
-    show s neutral
+    show s neutral at character_transform
     s "Excuse me?"
 
     hide s neutral
-    show m neutral
+    show m neutral at character_transform
 
     m "We both know it's not true."
 
@@ -274,60 +277,60 @@ label start:
     m "You can have your little boy toys and short ones, but you'll always come back to me."
 
     hide m neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Please don't talk to Scott like that..."
 
     hide j neutral
-    show m neutral
+    show m neutral at character_transform
 
     m "Can't hear you over your mumbling, SPEAK UP."
 
     hide m neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "I...think we left off on a bad footing."
 
     j "Why don't we sit down and eat Scott's delicious food?"
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
     a "Yeah, wouldn't you love some... delicious food."
 
     hide a neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Have a seat mother."
 
     hide s neutral
-    show m neutral
+    show m neutral at character_transform
 
     m "Very well, only because you've made your mother's favorite, Osso Buco"
 
     hide m neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Don't you deserve the best?"
 
     "Everyone settles down in their seat"
 
     hide s neutral
-    show m neutral
+    show m neutral at character_transform
 
     m "It's such a shame that mark on your face had faded so quickly. I would've enjoyed this meal a lot more..."
 
     hide m neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "..."
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "How is the food mother?"
 
     hide s neutral
-    show m neutral
+    show m neutral at character_transform
     m "Disappointing. Though, you can't do better than your mother."
 
     m "It's unusually bitter."
@@ -342,27 +345,27 @@ label start:
 
     "Everyone bursts into laughter"
 
-    show a neutral
+    show a neutral at character_transform
 
     a "That sh*thead doesn't know what's coming"
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Do you think I went too far...?"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Did you hear her sadistic tone, John?"
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "She's still your mom."
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Was. After hurting you, she's no longer my mother."
 
@@ -370,22 +373,22 @@ label start:
 
     "Moment passes"
 
-    show a neutral
+    show a neutral at character_transform
 
     a "She's been gone for quite some while.."
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "I think it's gone too far, we need to check up on her."
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "I'll go. You've been through enough today."
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Okay..."
 
@@ -393,17 +396,17 @@ label start:
 
     "Silence..."
 
-    show j neutral
+    show j neutral at character_transform
 
     j "Scott's been gone for a while too. Do you think he's okay?"
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "He's probably trying to help her not sh*t her pants."
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "We should go check up on them."
 
@@ -420,39 +423,39 @@ label start:
     #GAME START
     scene bg kitchen
 
-    show s neutral
+    show s neutral at character_transform
 
     s "Oh good, you're awake."
     scene bg kitchen
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "What... happened?"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
         
     s "Okay, don't freak out but..."
 
     hide s neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "YOU FUCKING KILLED HER"
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Wait, what???"
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
     a "I always knew your stupid pranks were terrible, but this time you went too far!!"
     a "Scott's mother died from laxatives because of YOU!"
 
 
     hide a neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Well we don't know if she's actually dead!"
 
@@ -462,86 +465,86 @@ label start:
 
     #scott comes back
 
-    show s neutral
+    show s neutral at character_transform
     s "Yeah she's dead."
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "I didn't know it would go so far... People on reddit never mentioned it can kill a person.."
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "YOU'RE TAKING THESE IDEAS FROM REDDIT????"
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "I didn't mean for this to happen!"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Alright guys, let's all calm down for now."
 
     hide s neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "CALM DOWN?? YOUR MOTHER IS DEAD, YOUR BOYFRIEND MURDERED HER! AND YOU WANT US TO CALM DOWN?"
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Oh god... Scott.. I'm so sorry."
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Hey, it's okay, you didn't mean for this to happen. It was an accident!"
 
     hide s neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "His \"accident\"..." 
     a "IS CALLED MANSLAUGHTER"
     a "We need to go to the police."
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Police? No no no.. Please don't..!"
     j "I didn't mean for this to happen..! I don't want to go to jail! Please don't.."
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "No one is going to call the police."
     s  "Angel just remember, you'll ALSO have to face the consequences too."
     s "We're all accomplices here."
 
     hide s neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "..."
 
     hide a neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "We have to do something about this that DOESN'T involve the police."
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "... Where do you guys keep the cleaning supplies?"
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "Why?"
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
     
     j "We need to hide the body."
 
@@ -549,7 +552,7 @@ label start:
 
     j "First thing's first, let's cover her body with something.."
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
     s "Well, We do have a tarp somewhere in the garden."
 
     #Navigation tool highlights
@@ -577,7 +580,8 @@ label start:
 
 
     window hide
-    mapscroll kitchen gloves bleach hydrogenperoxide
+    mapscroll kitchen tarp
+
     window show
 
     #Cover the body segment
@@ -586,48 +590,49 @@ label start:
 
     #Wrong place - MIL BEdroom
 
-
-    show a neutral
+label tarp_bedroom:
+    show a neutral at character_transform
     a "Shouldn't be in here stupid, you're finding the tarp in the garden." 
     hide a neutral
 
-    #bathroom
 
-    show s neutral
+    #bathroom
+label tarp_bathroom:
+    show s neutral at character_transform
     s "Let's not go in there for a while.."
     hide s neutral
 
     #Scene change - garden
     #Sprites will show up
 
-    show s neutral
+    show s neutral at character_transform
     s "The tarp is over there by the under the table."
     hide s neutral
 
     #if player clicks anywhere else that's not under the table
 
-    show s neutral
+    show s neutral at character_transform
     s "That's not under the table"
     hide s neutral
 
     #After player hovers and click over tarp to know it's clickable
 
-    show j neutral
+    show j neutral at character_transform
     j "We got the tarp."
     j "We're going to need some cleaning supplies too."
     
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Hey... do you remember those true crime shows we used to watch all the time in high school?"
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "What about them?"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Well... what do those people normally get when cleaning a body?"
     #John tells the needed supplies to hide body
@@ -637,19 +642,19 @@ label start:
         "Gloves":
             pass
 
-    show j neutral
+    show j neutral at character_transform
     j "We need gloves to cover our fingerprints.. "
     hide j neutral
     menu:
         "Bleach and hydrogen peroxide":
             pass
-    show j neutral
+    show j neutral at character_transform
     j "Some bleach would help remove the blood stains but hydrogen peroxide gets rid of the blood stains under UV light"
     
     hide j neutral
  
 
-    show a neutral
+    show a neutral at character_transform
     a "You sound a bit too prepared for this..."
     hide a neutral
 
@@ -660,13 +665,13 @@ label start:
 
     #MAP SCROLL - Gloves
 
-    show j neutral
+    show j neutral at character_transform
     j "The gloves are on the table to my right... Easy find"
     hide j neutral
 
     #gloves are now clickable and player picks it up
 
-    show j neutral
+    show j neutral at character_transform
     j "I found the gloves"
 
     #END MAP SCROLL
@@ -676,7 +681,7 @@ label start:
     j "Would they be in the bathroom?"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "No... It wouldn't"
 
@@ -685,12 +690,11 @@ label start:
 
     hide s neutral
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
     j "Where would she put it?"
 
     hide j neutral
-
-    show s neutral
+    show s neutral at character_transform
     s "If I can remember... It should be somewhere in the kitchen"
 
     
@@ -705,21 +709,22 @@ label start:
 
     #MAP SCROLL - BLEACH AND HYDROGEN PEROXIDE
 
-    show j neutral
+    show j neutral at character_transform
     j "Here's the bleach.."
+    hide j
 
-    show a neutral
+    show a neutral at character_transform
     a "I can't believe you're going through with this."
     hide a neutral
 
     #if player picks up hydrogen peroxide
 
-    show j neutral
+    show j neutral at character_transform
 
     j "Hydrogen peroxide... best way to hide the blood stains."
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
     s "Who knew those true crimes show paid off?"
     hide s neutral
 
@@ -730,7 +735,7 @@ label start:
 
     scene bg bathroom_door
 
-    show s neutral
+    show s neutral at character_transform
 
     s "Okay, now that we have everything let's head back to the bathroom."
 
@@ -761,20 +766,20 @@ label start:
 
     #Scene change to the outside of the bathroom
 
-    show s neutral
+    show s neutral at character_transform
 
     s "Alright, it's done."
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Scott... I'm sorry. You should stop, I can clean the rest myself. "
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "You have nothing to apologize for. It's okay... I don't want you to face this alone. "
     hide s neutral
-    show s neutral
+    show s neutral at character_transform
 
     j "It's fine. I have to deal with the mess I made."
     hide j neutral
@@ -819,7 +824,7 @@ label start:
 
     scene bg bathroom
 
-    show j neutral
+    show j neutral at character_transform
 
     j "I'm fine..! I'm doing okay.. Don't come in here, I got it."
 
@@ -828,64 +833,64 @@ label start:
     play audio 'audio/sound door_open.mp3' 
     stop audio fadeout 0.5
 
-    show s neutral
+    show s neutral at character_transform
    
     s "John? Are you okay? What's happening?"
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "I already told you, I'm fine. Please leave me alone."
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "How can I leave you alone? You're clearly not fine."  
 
     
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "I'm sorry. I'm sorry for everything. This is all my fault. This wouldn't have happened if you had never met me."
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "What? What are you saying John?"
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "She's dead now because of me. I never meant to hurt you. I always ruin things, but I never wanted to ruin things with you."
     j "I'm not good enough for you. I don't know why you're still here."
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "John stop it... You didn't ruin things with me and you won't. I will always love you."
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Why? Why do you still love? I'm a mess and you deserve so much more."
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Don't tell me who I should love. I only want you in my life. We will get through this together."
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Why are you like this?"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "What do you mean?"
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "{b} I killed her. {/b}"
 
@@ -894,7 +899,7 @@ label start:
     j "Why are you acting like that didn't happen? Like I did a minor mistake?"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "John, to be totally honest."
 
@@ -912,34 +917,34 @@ label start:
 
     "{i} What does he mean by that? {/i}"
 
-    show s neutral
+    show s neutral at character_transform
 
     s "As long as you're safe, that's all that matters."
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Do you really mean that?"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Of course. I love you."
     s "And I'll always reassure you even at a time like this so you'll know I love you."
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "I love you too..."
 
     hide j neutral
 
 
-    show s neutral
+    show s neutral at character_transform
     s "Let's clean up together, okay?"
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
     j "Okay.."
 
     hide j neutral
@@ -949,35 +954,36 @@ label start:
     scene bg bathroom_door
     #cutscene end
 
-    show a neutral
+    show a neutral at character_transform
     a "What's next?"
 
     hide a neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "We need to find a place to hide the body."
 
     hide s neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "No sh*t sherlock. I meant how are we gonna do that? I don't think we can exactly pull off carrying a body bag around."
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "You're right. I'm not really sure what to do next..."
 
-    show a neutral
+    hide j
+    show a neutral at character_transform
 
     a "..."
 
     hide a neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "..."
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "..."
 
@@ -1003,17 +1009,17 @@ label start:
     "{i}She's coming home soon lol so I need to find a place around my house quickly. Do you guys know the best spot?{/i}"
     
     scene bg bathroom_door
-    show j neutral
+    show j neutral at character_transform
 
     j "Alright, I posted it."
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "There's no way this'll work."
 
     hide a neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Looks like you already got some replies."
 
@@ -1044,50 +1050,50 @@ label start:
 
     scene bg bathroom_door
 
-    show a neutral
+    show a neutral at character_transform
 
     a "Do we even have the supplies to even pull it off?"
 
     hide a neutral
 
-    show s neutral
+    show s neutral at character_transform
 
     s "Well, my mother used to garden a lot. I;m sure we have plenty of supplies lying around."
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Like what?"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "If we're putting her in the green house, shovels are a great starter. Perhaps fertilizers too?"
 
     s "It'll be hard to move around an open tarp, so we would also need to secure the body.. But there's no rope I think"
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "I saw some black cords in her closet. WOuld we be able to use that to tie the body?"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "That could work!"
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Do you really think we can pull this off?"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "No matter what, I'll always support you."
 
     hide s neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "You guys seem closer after cleaning..."
 
@@ -1100,7 +1106,7 @@ label start:
 
     "{i} New Objective: Find tools to hide body {/i}"
 
-    show j neutral
+    show j neutral at character_transform
 
     j "Okay, let's do this. I should get the cord from the bedroom first."
 
@@ -1109,7 +1115,7 @@ label start:
     #player enters the bedroom and grabs cord, automatically triggers dialogue - note John and Scott are in the room 
     #MAP SCROLL END
 
-    show j neutral
+    show j neutral at character_transform
     
 
     j "I got the cables. Now we just need to get the rest."
@@ -1118,88 +1124,88 @@ label start:
 
     scene bg mil_room
 
-    show s neutral
+    show s neutral at character_transform
 
     s "After this, we can pretend like none of this ever happened. We can move on and live peacfully"
 
     hide s neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "Wait... wouldn't people realize Scott's mother's sudden disappearance?"
 
     hide a neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "We shouldn't worry about that. No one liked her anyways, and she didn't exactly have friends. No one will notice."
 
     hide s neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "Sure... but what if someone DOES notice? Like her neighbors? Or even the mailman. This isn't going to work out."
 
     hide a neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "How about we forge a letter... to explain why she's gone?"
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Angel...?"
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "No way. I'm not doing that. I'm not forging these letters for you."
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Please Angel, you forged signatures all the time. THey were perfect replicas."
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "That's only to save your a**. We were young and I was stupid. Now you're using that agaist {i}me{/i}?"
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Angel, I need you. We need you. Please help me one last time."
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "I won't do that. It's a federal crime."
     hide a neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "What's one more felony? At this point, it can't be worse than murder."
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Scott's right. We're already in too deep."
 
     j "This is one thing that might help us get out of jail."
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "...fine. But after this is all over, I'm never talking to you again."
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Angel, you don't mean that right?"
 
     hide j neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "They were right about cutting you off. I should've listened to them. I shouldn't have come here."
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "..."
 
@@ -1236,11 +1242,11 @@ label letter_scene:
 
     scene bg mil_room
 
-    show s neutral
+    show s neutral at character_transform
     s "Now let's do the rest... We need fertilizer and a shovel."
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Both should be in the garden..."
 
@@ -1257,12 +1263,12 @@ label letter_scene:
 
     #After player picks up fertilizers
 
-    show j neutral
+    show j neutral at character_transform
 
     j "... organic fertilizer"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "So... animal shit?"
 
@@ -1272,7 +1278,7 @@ label letter_scene:
 
     #Shovel after picked up
 
-    show j neutral
+    show j neutral at character_transform
 
     j "Shovel.. am I seriously going through with this?"
 
@@ -1284,17 +1290,17 @@ label letter_scene:
 
     #Scene in green house
 
-    show j neutral
+    show j neutral at character_transform
 
     j "Okay, that should be everything. Now to just... bury her."
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Where's Angel?"
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "I think she's avoiding me... Is she really serious about not talking to me again?"
 
@@ -1305,18 +1311,18 @@ label letter_scene:
 
     hide j neutral
 
-    show s neutral
+    show s neutral at character_transform
 
     s "{b}I have a bad feeling about this{/b}"
 
     hide s neutral
 
-    show s neutral at left
+    show s neutral at character_transform, topleft
 
     s "I'm going to look for her."
 
 
-    show j neutral at right
+    show j neutral at character_transform, topright
     j "Oh alright, go ahead. I don't think she'll follow us though."
     
     
@@ -1325,7 +1331,7 @@ label letter_scene:
 
     "{i} Scott leaves the greenhouse {/i}"
 
-    show j neutral
+    show j neutral at character_transform
 
     
     #Scott leaves
@@ -1339,7 +1345,7 @@ label letter_scene:
     play audio 'audio/sound angel_scream.mp3'
     "{i} A familiar scream echoes inside the house {/i}"
 
-    show j neutral
+    show j neutral at character_transform
 
     j "What was that? Angel??"
 
@@ -1350,7 +1356,7 @@ label letter_scene:
 
     scene bg kitchen
 
-    show j neutral
+    show j neutral at character_transform
     "No... not here. I think the screams are coming from the bedroom."
 
     hide j neutral
@@ -1364,7 +1370,7 @@ label letter_scene:
 
     play audio 'audio/sound door_rattling.mp3'
 
-    show j neutral
+    show j neutral at character_transform
 
     j "Damn. The door's locked."
 
@@ -1375,8 +1381,8 @@ label letter_scene:
     j "Please come out and talk to me. We can work through this together."
 
     hide j neutral
-    show s neutral at right
-    show j neutral at left
+    show s neutral at character_transform, topright
+    show j neutral at character_transform, topleft
 
     #door open
     #Scott's sprite comes out
@@ -1410,12 +1416,12 @@ label letter_scene:
 
     a "LET ME OUT MOTHER F*CKER!!!"
 
-    show s neutral
+    show s neutral at character_transform
 
     s "Sh*t..."
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Angel??"
 
@@ -1424,11 +1430,11 @@ label letter_scene:
     play audio 'audio/sound door_kick.mp3'
     "{i}Angel kicks open the door to reveal she had been tied up and looked roughed{/i}"
 
-    show a neutral at center
+    show a neutral at character_transform
 
     a "YOU B*TCH!"
 
-    show j neutral at left
+    show j neutral at character_transform, topleft
 
 
     j "What's going on???"
@@ -1441,7 +1447,7 @@ label letter_scene:
 
     j "Scott... why did you do this to Angel?"
 
-    show s neutral at right
+    show s neutral at character_transform, topright
 
     s "I had to. She was going to turn us in to save herself. I don't want to lose you because of her."
 
@@ -1463,17 +1469,17 @@ label letter_scene:
 
 label angels_route:
 
-    show s neutral
+    show s neutral at character_transform
 
     s "No no no no no.... Please believe me! I did it for you. All of this is for you!"
 
     hide s neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Scott... please. Just leave me alone, I need some time to collect my thoughts."
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Okay... I'll give you some space. But please, reconsider this."
 
@@ -1484,7 +1490,7 @@ label angels_route:
     "{i}John and Angel leaves to the kitchen{/i}"
 
 
-    show a neutral 
+    show a neutral at character_transform 
 
     a "I'm sorry."
 
@@ -1492,9 +1498,9 @@ label angels_route:
 
     scene bg kitchen
 
-    show a neutral at right
+    show a neutral at character_transform, topright
 
-    show j neutral at left
+    show j neutral at character_transform, topleft
 
     j "There's nothing to be sorry about."
 
@@ -1550,18 +1556,18 @@ label angels_route:
     "{i}THUDS{/i}"
     play audio 'audio/sound thud.mp3'
 
-    show s neutral at left
+    show s neutral at character_transform, topleft
 
 
     s "John. Don't listen to her."
 
-    show a neutral at right
+    show a neutral at character_transform, topright
 
     a "You b*tch, he's not going to believe you after evrything we've been through."
 
     s "Why would I ever hurt him? I lov him so much..."
 
-    show j neutral at center
+    show j neutral at character_transform
 
     j "Scott... {i}Did you kill your mom{/i}?"
 
@@ -1637,26 +1643,26 @@ label angels_route:
 
     scene bg kitchen
 
-    show s neutral
+    show s neutral at character_transform
 
     s "It was our love that killed her...! Your laxatives and my cyanide. Our love killed her."
 
     hide s neutral
-    show a neutral
+    show a neutral at character_transform
 
     a "Get away from us."
 
     hide a neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "WHY? I answered everything you asked me to. I did everything for you John, please tell her she's being unreasonable."
 
     hide s neutral
-    show j neutral 
+    show j neutral at character_transform 
 
     j "We need to go."
 
-    show s neutral at left
+    show s neutral at character_transform, topleft
 
     s "NO PLEASE!"
 
@@ -1686,27 +1692,27 @@ label angels_route:
 
 label scotts_route:
 
-    show a neutral
+    show a neutral at character_transform
 
-    a "John, what the f*ck are you saying? Do you see me? Look at what that PSYCHO did to me!"
+    a "John, what the f*ck are you saying? Do you see me? Look, what that PSYCHO did to me!"
 
     hide a neutral
-    show j neutral
+    show j neutral at character_transform
 
     j "Angel, you've been against me from the start. How can I believe you now?"
 
     hide j neutral
-    show s neutral
+    show s neutral at character_transform
 
     s "Angel, just stop. We're not going to believe you after all of your deception"
 
     hide s neutral
-    show a neutral at right
+    show a neutral at character_transform, topright
     
 
     a "You're one to talk b*tch."
 
-    show j neutral at center
+    show j neutral at character_transform
 
     j "ANGEL! That's enough."
 
@@ -1721,7 +1727,7 @@ label scotts_route:
 
     a "That's not it at all."
 
-    show s neutral at left
+    show s neutral at character_transform, topleft
 
     s "Do you want me to shut her up dear?"
 
@@ -1732,7 +1738,7 @@ label scotts_route:
 
     a "No no no please don't..."
 
-    a "John? You can believe me, right?"
+    a "John? You can believe me, topright?"
 
     j "..."
 
@@ -1785,11 +1791,11 @@ label scotts_route:
 
     scene bg mil_room
 
-    show s neutral at left
+    show s neutral at character_transform, topleft
 
     s "I knew no matter what happened, she would always be in the way. I wanted our happiness."
 
-    show j neutral 
+    show j neutral at character_transform 
 
     j "Weren't we happy before?"
 
