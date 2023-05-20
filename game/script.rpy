@@ -557,6 +557,8 @@ label start:
     j "First thing's first, let's cover her body with something.."
     s "Well, We do have a tarp somewhere in the garden."
 
+    "{i} Objective: Find the tarp in the garden {/i}"
+
 
 
 
@@ -583,59 +585,111 @@ label start:
 
     #Wrong place - MIL BEdroom
 
+
+    show a neutral
     a "Shouldn't be in here stupid, you're finding the tarp in the garden." 
+    hide a neutral
 
     #bathroom
 
+    show s neutral
     s "Let's not go in there for a while.."
+    hide s neutral
 
     #Scene change - garden
     #Sprites will show up
 
+    show s neutral
     s "The tarp is over there by the under the table."
+    hide s neutral
 
     #if player clicks anywhere else that's not under the table
 
+    show s neutral
     s "That's not under the table"
+    hide s neutral
 
     #After player hovers and click over tarp to know it's clickable
 
+    show j neutral
+    j "We got the tarp."
     j "We're going to need some cleaning supplies too."
+    
+    hide j neutral
+    show s neutral
 
     s "Hey... do you remember those true crime shows we used to watch all the time in high school?"
 
+    hide s neutral
+    show j neutral
+
     j "What about them?"
+
+    hide j neutral
+    show s neutral
 
     s "Well... what do those people normally get when cleaning a body?"
     #John tells the needed supplies to hide body
+    hide s neutral
 
+    menu:
+        "Gloves":
+            pass
+
+    show j neutral
     j "We need gloves to cover our fingerprints.. "
+    hide j neutral
+    menu:
+        "Bleach":
+            pass
+    show j neutral
     j "Some bleach would help remove the blood stains but hydrogen peroxide gets rid of the blood stains under UV light"
+    hide j neutral
+
+    menu:
+        "Mop":
+            pass
+    show j neutral
     j "We need a mop too."
+    hide j neutral  
 
+    show a neutral
     a "You sound a bit too prepared for this..."
+    hide a neutral
 
+    "{i} Objective: Find the cleaning supplies {/i}"
     # Player will now navigate and press on needed items for the game, take a look on diagram for more info
 
     #Gloves
 
+    show j neutral
     j "The gloves are on the table to my right... Easy find"
+    hide j neutral
 
     #gloves are now clickable and player picks it up
 
+    show j neutral
     j "I found the gloves"
 
     j "Now we need the bleach and hydrogen peroxide."
 
     j "Would they be in the bathroom?"
 
+    hide j neutral
+    show s neutral
+
     s "No... It wouldn't"
 
     s "When I was a child, my mother would constantly clean anything she deems as dirty..."
     s "She wouldn't put any cleaning products in there"
 
+    hide s neutral
+    hide s neutral
+    show j neutral
     j "Where would she put it?"
 
+    hide j neutral
+    show s neutral
     s "If I can remember... It should be somewhere in the kitchen"
 
     #Scene change/player goes to kitchen 
@@ -643,24 +697,40 @@ label start:
     #items will be clickable when hovered over
 
     #if player picks up bleach
+
+    show j neutral
+    hide j neutral
+
     j "Here's the bleach.."
+
+    show a neutral
     a "I can't believe you're going through with this."
+    hide a neutral
 
     #if player picks up hydrogen peroxide
 
+    show j neutral
+
     j "Hydrogen peroxide... best way to hide the blood stains."
+
+    hide j neutral
+    show s neutral
     s "Who knew those true crimes show paid off?"
+    hide s neutral
 
-    #If player picks wrong cabinet
-
-    j "I need to find another cabinet."
+    
 
     #After player collects everything 
     #scene changes to the front of the bathroom/cutscene
 
     scene bg bathroom_door
 
+    show s neutral
+
     s "Okay, now that we have everything let's head back to the bathroom."
+
+    hide s neutral
+    scene bg reveal
 
     a "Is he... crying?"
 
@@ -678,19 +748,32 @@ label start:
 
     a "But I guess he's been hiding his true feelings this entire time."
 
+    scene bg bathroom_door
+
     "Silence as they look at Scott's back slowly stop shaking"
 
     a "Well, she was full of sh*t anyways.."
 
     #Scene change to the outside of the bathroom
 
-    s "*sniffles* Alright, it's done."
+    show s neutral
+
+    s "Alright, it's done."
+    hide s neutral
+    show j neutral
 
     j "Scott... I'm sorry. You should stop, I can clean the rest myself. "
 
+    hide j neutral
+    show s neutral
+
     s "You have nothing to apologize for. It's okay... I don't want you to face this alone. "
+    hide s neutral
+    show s neutral
 
     j "It's fine. I have to deal with the mess I made."
+    hide j neutral
+
     with dissolve
     #cut scene
 
@@ -731,37 +814,73 @@ label start:
 
     scene bg bathroom
 
+    show j neutral
+
     j "I'm fine..! I'm doing okay.. Don't come in here, I got it."
-    #change scenes
 
-    #Scott comes in anyways, concerned for John
-
-    #Scott is behind John, facing the mirror, Scott is reflected on the left side of John's shoulder.
+    hide j neutral
 
     play audio 'audio/sound door_open.mp3' 
     stop audio fadeout 0.5
+
+    show s neutral
    
     s "John? Are you okay? What's happening?"
 
+    hide s neutral
+    show j neutral
+
     j "I already told you, I'm fine. Please leave me alone."
 
-    s "How can I leave you alone? You're clearly not fine."    
+    hide j neutral
+    show s neutral
+
+    s "How can I leave you alone? You're clearly not fine."  
+
+    
+    hide s neutral
+    show j neutral
 
     j "I'm sorry. I'm sorry for everything. This is all my fault. This wouldn't have happened if you had never met me."
 
+    hide j neutral
+    show s neutral
+
     s "What? What are you saying John?"
 
-    j "She's dead now because of me. I never meant to hurt you. I always ruin things, but I never wanted to ruin things with you. I'm not good enough for you. I don't know why you're still here."
+    hide s neutral
+    show j neutral
+
+    j "She's dead now because of me. I never meant to hurt you. I always ruin things, but I never wanted to ruin things with you."
+    j "I'm not good enough for you. I don't know why you're still here."
+
+    hide j neutral
+    show s neutral
 
     s "John stop it... You didn't ruin things with me and you won't. I will always love you."
 
+    hide s neutral
+    show j neutral
+
     j "Why? Why do you still love? I'm a mess and you deserve so much more."
+
+    hide j neutral
+    show s neutral
 
     s "Don't tell me who I should love. I only want you in my life. We will get through this together."
 
+    hide s neutral
+    show j neutral
+
     j "Why are you like this?"
 
+    hide j neutral
+    show s neutral
+
     s "What do you mean?"
+
+    hide s neutral
+    show j neutral
 
     j "{b} I killed her. {/b}"
 
@@ -769,9 +888,12 @@ label start:
 
     j "Why are you acting like that didn't happen? Like I did a minor mistake?"
 
+    hide j neutral
+    show s neutral
+
     s "John, to be totally honest."
 
-    s "I'm{b}really terrified {/b}."
+    s "I'm{b} really terrified {/b}."
 
     s "I don't know what's going to happen to us, but all I know is that I want to protect you..."
 
@@ -781,37 +903,80 @@ label start:
 
     s "I know my reaction doesn't seem normal... but I've mourned a long time ago"
 
+    hide s neutral
+
     "{i} What does he mean by that? {/i}"
+
+    show s neutral
 
     s "As long as you're safe, that's all that matters."
 
-    j "Really?"
+    hide s neutral
+    show j neutral
+
+    j "Do you really mean that?"
+
+    hide j neutral
+    show s neutral
 
     s "Of course. I love you."
+    s "And I'll always reassure you even at a time like this so you'll know I love you."
+
+    hide s neutral
+    show j neutral
 
     j "I love you too..."
 
+    hide j neutral
 
 
+    show s neutral
     s "Let's clean up together, okay?"
 
+    hide s neutral
+    show j neutral
     j "Okay.."
 
+    hide j neutral
+    
+    with dissolve
+
+    scene bg bathroom_door
     #cutscene end
 
+    show a neutral
     a "What's next?"
+
+    hide a neutral
+    show s neutral
 
     s "We need to find a place to hide the body."
 
+    hide s neutral
+    show a neutral
+
     a "No sh*t sherlock. I meant how are we gonna do that? I don't think we can exactly pull off carrying a body bag around."
+
+    hide a neutral
+    show j neutral
 
     j "You're right. I'm not really sure what to do next..."
 
+    show a neutral
+
     a "..."
+
+    hide a neutral
+    show s neutral
 
     s "..."
 
+    hide s neutral
+    show j neutral
+
     j "..."
+
+    hide j neutral
 
     scene bg phonescene1
 
@@ -829,13 +994,27 @@ label start:
     scene bg phonescene3
 
     "{i}JohnPoe: Where to hide (fake) body to scare MIL?{/i}"
-    "{i}Hey guys, so I want to do a funny prank on my MIL by hiding this fake body bag around my house. She’s coming home soon lol so I need to find a place around my house quickly. Do you guys know the best spot?{/i}"
+    "{i}Hey guys, so I want to do a funny prank on my MIL by hiding this fake body bag around my house. {/i}"
+    "{i}She's coming home soon lol so I need to find a place around my house quickly. Do you guys know the best spot?{/i}"
     
+    scene bg bathroom_door
+    show j neutral
+
     j "Alright, I posted it."
+
+    hide j neutral
+    show a neutral
 
     a "There's no way this'll work."
 
+    hide a neutral
+    show s neutral
+
     s "Looks like you already got some replies."
+
+    hide s neutral
+
+    scene bg phonescene3
 
     "HisKitten: Omg lool- How did you come up with these stuff? Personally a bathroom might be funny cause she'll sh*t herself!"
     "HerMod: That would be so crappy 8)"
@@ -860,71 +1039,165 @@ label start:
 
     scene bg bathroom_door
 
+    show a neutral
+
     a "Do we even have the supplies to even pull it off?"
+
+    hide a neutral
+
+    show s neutral
 
     s "Well, my mother used to garden a lot. I;m sure we have plenty of supplies lying around."
 
+    hide s neutral
+    show j neutral
+
     j "Like what?"
+
+    hide j neutral
+    show s neutral
 
     s "If we're putting her in the green house, shovels are a great starter. Perhaps fertilizers too?"
 
     s "It'll be hard to move around an open tarp, so we would also need to secure the body.. But there's no rope I think"
 
-    j "I saw sime black cords in her closet. WOuld we be able to use that to tie the body?"
+    hide s neutral
+    show j neutral
+
+    j "I saw some black cords in her closet. WOuld we be able to use that to tie the body?"
+
+    hide j neutral
+    show s neutral
 
     s "That could work!"
 
+    hide s neutral
+    show j neutral
+
     j "Do you really think we can pull this off?"
+
+    hide j neutral
+    show s neutral
 
     s "No matter what, I'll always support you."
 
-    a "..."
+    hide s neutral
+    show a neutral
+
+    a "You guys seem closer after cleaning..."
+
+    hide a neutral
+
 
     #NEW OBJ Find tools to hide body
 
+    "{i} New Objective: Find tools to hide body {/i}"
+
+    show j neutral
+
     j "Okay, let's do this. I should get the cord from the bedroom first."
+
+    hide j neutral
 
     #player enters the bedroom and grabs cord, automatically triggers dialogue - note John and Scott are in the room 
 
     scene bg closet
 
+    show j neutral
+    
+
     j "I got the cables. Now we just need to get the rest."
+
+    hide j neutral
 
     scene bg mil_room
 
+    show s neutral
+
     s "After this, we can pretend like none of this ever happened. We can move on and live peacfully"
+
+    hide s neutral
+    show a neutral
 
     a "Wait... wouldn't people realize Scott's mother's sudden disappearance?"
 
+    hide a neutral
+    show s neutral
+
     s "We shouldn't worry about that. No one liked her anyways, and she didn't exactly have friends. No one will notice."
 
-    a "Sure... but what if someone DOES notice? Like her neighbors? Or even the mailman. THis isn't going to work out."
+    hide s neutral
+    show a neutral
+
+    a "Sure... but what if someone DOES notice? Like her neighbors? Or even the mailman. This isn't going to work out."
+
+    hide a neutral
+    show s neutral
 
     s "How about we forge a letter... to explain why she's gone?"
 
+    hide s neutral
+    show j neutral
+
     j "Angel...?"
+
+    hide j neutral
+    show a neutral
 
     a "No way. I'm not doing that. I'm not forging these letters for you."
 
-    j "Pleas ANgel, you forged signatures all the time. THey were perfect replicas."
+    hide a neutral
+    show j neutral
 
-    a "That's only to save your ass. We were young and I was stupid. Now you're using that agaist {i}me{/i}?"
+    j "Please Angel, you forged signatures all the time. THey were perfect replicas."
+
+    hide j neutral
+    show a neutral
+
+    a "That's only to save your a**. We were young and I was stupid. Now you're using that agaist {i}me{/i}?"
+
+    hide a neutral
+    show j neutral
 
     j "Angel, I need you. We need you. Please help me one last time."
 
+    hide j neutral
+    show a neutral
+
     a "I won't do that. It's a federal crime."
+    hide a neutral
+    show s neutral
 
     s "What's one more felony? At this point, it can't be worse than murder."
 
+    hide s neutral
+    show j neutral
+
     j "Scott's right. We're already in too deep."
+
+    j "This is one thing that might help us get out of jail."
+
+    hide j neutral
+    show a neutral
 
     a "...fine. But after this is all over, I'm never talking to you again."
 
+    hide a neutral
+    show j neutral
+
     j "Angel, you don't mean that right?"
+
+    hide j neutral
+    show a neutral
 
     a "They were right about cutting you off. I should've listened to them. I shouldn't have come here."
 
+    hide a neutral
+    show j neutral
+
     j "..."
+
+    hide j neutral
 
 label letter_scene:
 
@@ -957,44 +1230,91 @@ label letter_scene:
 
     scene bg mil_room
 
+    show s neutral
     s "Now let's do the rest... We need fertilizer and a shovel."
 
-    j "Both should be in the garden."
+    hide s neutral
+    show j neutral
+
+    j "Both should be in the garden..."
+
+    hide j neutral
 
     #Fertilizer is found in green house
 
     scene bg garden
 
+    #After player picks up fertilizers
+
+    show j neutral
+
     j "... organic fertilizer"
+
+    hide j neutral
+    show s neutral
 
     s "So... animal shit?"
 
     s "How fitting."
 
-    #Shovel
+    hide s neutral
 
-    j "Shovel.. I'm seriously going to do this?"
+    #Shovel after picked up
+
+    show j neutral
+
+    j "Shovel.. am I seriously going through with this?"
+
+    hide j neutral
 
     #After pickig up the item
 
     #Scene in green house
 
+    show j neutral
+
     j "Okay, that should be everything. Now to just... bury her."
 
-    s "Where's Angel...?"
+    hide j neutral
+    show s neutral
+
+    s "Where's Angel?"
+
+    hide s neutral
+    show j neutral
 
     j "I think she's avoiding me... Is she really serious about not talking to me again?"
 
     j "I know she's upset, but we had no choice. RIght? "
 
-    j "Some brother I am... Constantly dragging her down to clean my shit. Now she's saying our parents were right, she doesn't mean it right?"
+    j "Some brother I am... Constantly dragging her down to clean my sh*t" 
+    j "Now she's saying our parents were right, she doesn't mean it right?"
 
-    s "{i}I have a bad feeling about this{/i}"
+    hide j neutral
+
+    show s neutral
+
+    s "{b}I have a bad feeling about this{/b}"
+
+    hide s neutral
+
+    show s neutral at left
 
     s "I'm going to look for her."
 
-    j "Oh alright, go ahead. I don't think she'll follow us."
 
+    show j neutral at right
+    j "Oh alright, go ahead. I don't think she'll follow us though."
+    
+    
+    hide s neutral
+    hide j neutral
+
+    "{i} Scott leaves the greenhouse {/i}"
+
+    show j neutral
+
+    
     #Scott leaves
 
     j "Let's finish this."
@@ -1006,18 +1326,21 @@ label letter_scene:
     play audio 'audio/sound angel_scream.mp3'
     "{i} A familiar scream echoes inside the house {/i}"
 
+    show j neutral
+
     j "What was that? Angel??"
 
     j "I think the screams came from the bedroom. I should check it out and see if she's okay."
 
-    #Player navigates to bedroom
+    hide j neutral
 
-    #if anywhere else
 
     scene bg kitchen
 
+    show j neutral
     "No... not here. I think the screams are coming from the bedroom."
 
+    hide j neutral
     #When player reaches the bedroom
 
     #I hear her in the closet..
@@ -1027,6 +1350,9 @@ label letter_scene:
     scene bg mil_room
 
     play audio 'audio/sound door_rattling.mp3'
+
+    show j neutral
+
     j "Damn. The door's locked."
 
     j "Angel, it's me. Are you okay?"
@@ -1034,6 +1360,10 @@ label letter_scene:
     j "Is this about earlier? I'm sorry..."
 
     j "Please come out and talk to me. We can work through this together."
+
+    hide j neutral
+    show s neutral at right
+    show j neutral at left
 
     #door open
     #Scott's sprite comes out
@@ -1045,6 +1375,8 @@ label letter_scene:
     j "But... I heard a scream... I need to see for myself that she's okay."
 
     s "She REALLY needs some space right now John"
+
+
     #Thuds sound
 
     play audio 'audio/sound thud.mp3'
@@ -1060,15 +1392,31 @@ label letter_scene:
     play audio 'audio/sound angel_curse.mp3'
     "{i}Angel Screaming{/i}"
 
+    hide s neutral
+    hide j neutral
+
     a "LET ME OUT MOTHER F*CKER!!!"
+
+    show s neutral
 
     s "Sh*t..."
 
+    hide s neutral
+    show j neutral
+
     j "Angel??"
+
+    hide j neutral
+    
     play audio 'audio/sound door_kick.mp3'
     "{i}Angel kicks open the door to reveal she had been tied up and looked roughed{/i}"
 
+    show a neutral at center
+
     a "YOU B*TCH!"
+
+    show j neutral at left
+
 
     j "What's going on???"
 
@@ -1080,6 +1428,8 @@ label letter_scene:
 
     j "Scott... why did you do this to Angel?"
 
+    show s neutral at right
+
     s "I had to. She was going to turn us in to save herself. I don't want to lose you because of her."
 
     j "But... she's bleeding."
@@ -1087,6 +1437,10 @@ label letter_scene:
     a "John, snap out of this. Scott is not a good person. Don't listen to him."
 
     s "Why would he not listen to you? Angel was only thinking of saving herself, she was going to cut you off, remember? I would never do that to you. I can't lose you. We're in this together."
+
+    hide j neutral
+    hide a neutral
+    hide s neutral
 
     menu:
         "I trust you Angel.":
@@ -1096,20 +1450,38 @@ label letter_scene:
 
 label angels_route:
 
+    show s neutral
+
     s "No no no no no.... Please believe me! I did it for you. All of this is for you!"
+
+    hide s neutral
+    show j neutral
 
     j "Scott... please. Just leave me alone, I need some time to collect my thoughts."
 
+    hide j neutral
+    show s neutral
+
     s "Okay... I'll give you some space. But please, reconsider this."
+
+    hide s neutral
 
     #Kitchen scene
     with dissolve
-    "{i}John and ANgel leaves to the kitchen{/i}"
+    "{i}John and Angel leaves to the kitchen{/i}"
 
+
+    show a neutral 
 
     a "I'm sorry."
+
+    hide a neutral
+
     scene bg kitchen
 
+    show a neutral at right
+
+    show j neutral at left
 
     j "There's nothing to be sorry about."
 
@@ -1119,7 +1491,7 @@ label angels_route:
 
     a "I know."
 
-    j " No.. you really don’t. When mom and dad disowned me, I was at my lowest point in my life. "
+    j " No.. you really don't. When mom and dad disowned me, I was at my lowest point in my life. "
 
     j "I fell in love with Scott at the lowest point of my life. He knew who I was, yet ...he allowed himself to fall for me."
 
@@ -1158,15 +1530,25 @@ label angels_route:
 
     j "You don't think..."
 
+    hide j neutral
+    hide a neutral
+
     #Audio plays thuds
     "{i}THUDS{/i}"
     play audio 'audio/sound thud.mp3'
 
+    show s neutral at left
+
+
     s "John. Don't listen to her."
+
+    show a neutral at right
 
     a "You b*tch, he's not going to believe you after evrything we've been through."
 
     s "Why would I ever hurt him? I lov him so much..."
+
+    show j neutral at center
 
     j "Scott... {i}Did you kill your mom{/i}?"
 
@@ -1199,6 +1581,10 @@ label angels_route:
     s "{i}No no no no...{/i}"
 
     s "{i}No no no no no no no....{/i}"
+
+    hide s neutral
+    hide a neutral
+    hide j neutral
 
     #scene changes angel route
 
@@ -1235,15 +1621,34 @@ label angels_route:
     j "Did you do it?"
 
     #Scene change
+
+    scene bg kitchen
+
+    show s neutral
+
     s "It was our love that killed her...! Your laxatives and my cyanide. Our love killed her."
+
+    hide s neutral
+    show a neutral
 
     a "Get away from us."
 
+    hide a neutral
+    show s neutral
+
     s "WHY? I answered everything you asked me to. I did everything for you John, please tell her she's being unreasonable."
+
+    hide s neutral
+    show j neutral 
 
     j "We need to go."
 
+    show s neutral at left
+
     s "NO PLEASE!"
+
+    hide s neutral
+    hide j neutral
 
     "{i} John and Angel hurridely escapes the house. {/i}"
 
@@ -1268,15 +1673,30 @@ label angels_route:
 
 label scotts_route:
 
+    show a neutral
+
     a "John, what the f*ck are you saying? Do you see me? Look at what that PSYCHO did to me!"
+
+    hide a neutral
+    show j neutral
 
     j "Angel, you've been against me from the start. How can I believe you now?"
 
+    hide j neutral
+    show s neutral
+
     s "Angel, just stop. We're not going to believe you after all of your deception"
+
+    hide s neutral
+    show a neutral at right
+    
 
     a "You're one to talk b*tch."
 
+    show j neutral at center
+
     j "ANGEL! That's enough."
+
 
     a "John, please, you have to believe me. I'm your sister, you can trust me when I tell you, Scott is not who he says he is."
 
@@ -1288,7 +1708,12 @@ label scotts_route:
 
     a "That's not it at all."
 
+    show s neutral at left
+
     s "Do you want me to shut her up dear?"
+
+    hide s neutral
+
 
     j "..."
 
@@ -1305,6 +1730,11 @@ label scotts_route:
     j "..."
 
     a "I know you're still in there."
+
+    a "Please..."
+
+    hide a neutral
+    hide j neutral
 
     "{i} Scott and angel both disappear into the closet {/i}"
     play audio 'audio/sound angel_scream.mp3'
@@ -1342,7 +1772,11 @@ label scotts_route:
 
     scene bg mil_room
 
+    show s neutral at left
+
     s "I knew no matter what happened, she would always be in the way. I wanted our happiness."
+
+    show j neutral 
 
     j "Weren't we happy before?"
 
@@ -1421,6 +1855,11 @@ label scotts_route:
     s "I don't know what will happen now, but as long as you're here, I'm okay."
 
     s "Let's leave this prison together."
+
+    hide j neutral
+    hide s neutral
+
+    scene bg kitchen
 
     "{i} John and Scott both embrace each other lovingly"
     "{i} Leaving the Charmin House locking each other's arm"
