@@ -80,18 +80,19 @@ label start:
     m "..."
     m "You've gained weight, Scott."
     s "Ah ha ha.... Hello, mother... I'd like you to meet-"
-    m "I assume you must be the girlfriend"
-    a "PFFT *gags* ahem, uh no. That \"girlfriend\" would be him."
+    m "Who's the short one. I was only expecting two people."
+    
+    a "(The short one... IS SHE TALKING ABOUT ME???)"
 
     j "Um... hello Ms.Charmin."
     s "Mother, as I was trying to tell you, this is my partner John Doe. And this is his younger sister Angel."
-    m "Oh, I see. How disappointing..."
+    m "How disappointing..."
 
     j "Um...uh... it's a, um, pleasure to finally meet you Ms.Charmin. Scott told me... um.. so much about you!"
     m "Then he must've told you, I really despise mumbling. Speak up"
     s "Mother, that's enough. Can we come in now?"
     m "*sighs* I suppose.. Though, I wasn't aware three of you will be coming over. There's only food prepared for us, there won't be enough for the short one."
-    a "(The short one... IS SHE TALKING ABOUT ME???)"
+   
 
     s "That's fine, I can cook something up. C'mon guys, let's head inside."
     m "..."
