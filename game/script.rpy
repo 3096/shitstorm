@@ -110,37 +110,37 @@ label start:
 
     scene bg kitchencutscene1
 
-    "..."
+    pause
 
     scene bg kitchencutscene2
 
-    "..."
+    pause
 
     scene bg kitchencutscene3
 
-    "..."
+    pause
 
     scene bg kitchencutscene4
 
-    "..."
+    pause
 
     scene bg kitchencutscene5
 
-    "..."
+    pause
 
     scene bg kitchencutscene6
 
 
-    "..."
+    pause
 
     scene bg kitchencutscene7
 
-    "..." 
+    pause 
 
     #cutscene 2
     scene bg leadup
 
-    "..."
+    pause
 
    
     scene bg kitchen
@@ -238,7 +238,7 @@ label start:
     show a neutral at character_transform
     a "...fine. I'll only look out for you."
     scene bg leadup1
-    "..."
+    pause
 
     a "She's coming."
     #scene changes - kitchen
@@ -564,25 +564,14 @@ label start:
     "{i} Objective: Find the tarp in the garden {/i}"
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-    window hide
-    mapscroll kitchen tarp
-
-    window show
+label tarp_mapscroll:
+    mapscroll:
+        tarp
+        before_enter mil_room tarp_bedroom
+        before_enter bathroom tarp_bathroom
+        on_enter garden tarp_garden
+        before_pickup gloves tarp_garden_wrong
+        on_pickup tarp tarp_garden_picked
 
     #Cover the body segment
 
@@ -594,29 +583,32 @@ label tarp_bedroom:
     show a neutral at character_transform
     a "Shouldn't be in here stupid, you're finding the tarp in the garden." 
     hide a neutral
-
+    jump tarp_mapscroll
 
     #bathroom
 label tarp_bathroom:
     show s neutral at character_transform
     s "Let's not go in there for a while.."
     hide s neutral
+    jump tarp_mapscroll
 
     #Scene change - garden
     #Sprites will show up
-
+label tarp_garden:
     show s neutral at character_transform
     s "The tarp is over there by the under the table."
     hide s neutral
+    jump tarp_mapscroll
 
     #if player clicks anywhere else that's not under the table
-
-    show s neutral at character_transform
-    s "That's not under the table"
-    hide s neutral
+label tarp_garden_wrong:
+    show a neutral at character_transform
+    a "That's not under the table"
+    hide a neutral
+    jump tarp_mapscroll
 
     #After player hovers and click over tarp to know it's clickable
-
+label tarp_garden_picked:
     show j neutral at character_transform
     j "We got the tarp."
     j "We're going to need some cleaning supplies too."
@@ -665,12 +657,18 @@ label tarp_bathroom:
 
     #MAP SCROLL - Gloves
 
+label gloves_mapscroll:
     show j neutral at character_transform
     j "The gloves are on the table to my right... Easy find"
     hide j neutral
 
     #gloves are now clickable and player picks it up
+    mapscroll:
+        gloves
+        on_pickup gloves gloves_picked
+        before_enter kitchen gloves_mapscroll
 
+label gloves_picked:
     show j neutral at character_transform
     j "I found the gloves"
 
@@ -696,19 +694,21 @@ label tarp_bathroom:
     hide j neutral
     show s neutral at character_transform
     s "If I can remember... It should be somewhere in the kitchen"
+    hide s neutral
 
-    
+    #MAP SCROLL - BLEACH AND HYDROGEN PEROXIDE
+label mapscroll_bleach_hydrogen:
+    mapscroll:
+        bleach hydrogenperoxide
+        on_pickup bleach bleach_picked
+        on_pickup hydrogenperoxide hydrogenperoxide_picked
 
     #Scene change/player goes to kitchen 
     #if player picks the bottom cabinet (take ref from diagram)
     #items will be clickable when hovered over
 
     #if player picks up bleach
-
-    hide s neutral
-
-    #MAP SCROLL - BLEACH AND HYDROGEN PEROXIDE
-
+label bleach_picked:
     show j neutral at character_transform
     j "Here's the bleach.."
     hide j
@@ -717,8 +717,12 @@ label tarp_bathroom:
     a "I can't believe you're going through with this."
     hide a neutral
 
-    #if player picks up hydrogen peroxide
+    if "bleach" in mapscroll_items_picked and "hydrogenperoxide" in mapscroll_items_picked:
+        jump everything_cleaning_picked
+    jump mapscroll_bleach_hydrogen
 
+    #if player picks up hydrogen peroxide
+label hydrogenperoxide_picked:
     show j neutral at character_transform
 
     j "Hydrogen peroxide... best way to hide the blood stains."
@@ -728,11 +732,14 @@ label tarp_bathroom:
     s "Who knew those true crimes show paid off?"
     hide s neutral
 
+    if "bleach" in mapscroll_items_picked and "hydrogenperoxide" in mapscroll_items_picked:
+        jump everything_cleaning_picked
+    jump mapscroll_bleach_hydrogen
     #END MAP SCROLL
 
     #After player collects everything 
     #scene changes to the front of the bathroom/cutscene
-
+label everything_cleaning_picked:
     scene bg bathroom_door
 
     show s neutral at character_transform
@@ -1029,7 +1036,7 @@ label tarp_bathroom:
 
     "HisKitten: Omg lool- How did you come up with these stuff? Personally a bathroom might be funny cause she'll sh*t herself!"
     "HerMod: That would be so crappy 8)"
-    "Alone4Lyfe: Too many sh*tty puns here"
+    "dualie_ink: Too many sh*tty puns here"
 
     j "A little bit on the nose..."
 
@@ -1895,4 +1902,4 @@ label scotts_route:
 
     "Shit..."
 
-return 
+return
