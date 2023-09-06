@@ -42,31 +42,35 @@ label start:
     s "So you are nervous."
     j "... maybe"
 
-    s "*laughs* I knew it. You've been acting strange all day. What's going on inside your head? Almost feels like you're hiding something."
+    s "haha I knew it. You've been acting strange all day. What's going on inside your head? Almost feels like you're hiding something."
     j "Well, you told me before that your mother can be..."
     s "Difficult?"
     j "Sometimes.. So, of course I'm nervous to meet her! What if she doesn't like me?"
     s "It's true that she's hard to please... but it'll just be one dinner together. We should be fine."
-    j "I guess... but, I'm not really the type of person people would want to bring home to their parents you know? I just don't want to let you down..."
-    s "Hey, listen to me. You're not the person who pulled those silly pranks back in high school anymore. You're the person who I fell in love with. You're smart and ambitious, I've never met anyone as amazing as you. If my mother can't see that, then that's her loss"
+    j "I guess... but, I'm not really the type of person people would want to bring home to their parents you know?"
+    j "I just don't want to let you down..."
+    s "Hey, listen to me. You're not the person who pulled those silly pranks back in high school anymore. You're someone who I fell in love with. "
+    s "You're smart and ambitious, I've never met anyone as amazing as you. If my mother can't see that, then we'll cut out losses."
     j "But... what if..."
 
-    a "Get your shit together, John. Who cares if she doesn't like you? If worse comes to worst, you and Scott were doing fine without her anyways, so what's the big deal?"
+    a "Get your sh*t together, John. Who cares if she doesn't like you?"
+    a "If worse comes to worst, you and Scott were doing fine without her anyways, so what's the big deal?"
     j "Maybe you're right Angel... I think I really needed to hear that."
-    a "I just don't want you to overthink this..."
+    a "I just don't want you to overthink this."
     j "And I appreciate it. Thanks for coming with us today. You're my favorite family member."
-    a "Of course, I'm the best."
-    a "Wait. Mom and dad cut you off... so doesn't that make me your only family member?"
+    a "I'm your only family member."
     j "..."
     a "idiot."
 
-    s " *laughs* Your sister was right you know? About how we don't need my mother's approval. No matter what happens today, we're in this together"
+    s "Haha, your sister is right you know?" 
+    s "About how we don't need my mother's approval. No matter what happens today, we're in this together."
     j "Thanks, Scott..."
     a "Where's my thank you?"
-    j "thankkkk youuu Angel"
-    a "heh"
-    a "How much longer is it till we get to the house? I feel like we've been together in this car forever now"
-    s "Actually, we're pulling in now.. Welcome to the Charmin household."
+    j "Thanks..."
+    a "I'll accept that."
+    a "How much longer is it till we get to the house? I feel like we've been together in this car forever now."
+    s "Actually, we're pulling in now.."
+    s "Welcome to the Charmin household."
 
     # John, Angel, and Scott's POV of the front of the house
 
@@ -78,26 +82,40 @@ label start:
 
     # knock knock knock sounds
 
+    
+
     scene bg door_scene2
 
     m "..."
     m "You've gained weight, Scott."
     s "Ah ha ha.... Hello, mother... I'd like you to meet-"
-    m "Who's the short one. I was only expecting two people."
+    m "Who's the short one? I was only expecting two people."
     
     a "(The short one... IS SHE TALKING ABOUT ME???)"
 
     j "Um... hello Ms.Charmin."
-    s "Mother, as I was trying to tell you, this is my partner John Doe. And this is his younger sister Angel."
-    m "How disappointing..."
+    s "Mother, as I was trying to tell you. This is my partner John Doe. And this is his younger sister Angel."
+    m "How disappointing you chose a deliquent..."
 
-    j "Um...uh... it's a, um, pleasure to finally meet you Ms.Charmin. Scott told me... um.. so much about you!"
-    m "Then he must've told you, I really despise mumbling. Speak up"
-    s "Mother, that's enough. Can we come in now?"
-    m "*sighs* I suppose.. Though, I wasn't aware three of you will be coming over. There's only food prepared for us, there won't be enough for the short one."
-   
+    j "Oh um...uh...it's a, um, pleasure to finally meet you Ms.Charmin."
+    j "Scott told me... um.. so much about you!"
+    m "Then he must've told you, I really despise mumbling. Speak up."
+    s "{b}Mother, that's enough.{/b} Can we come in now?"
+    m "I suppose.. Though, I wasn't aware the three of you will be coming over."
+    m "There's only food prepared for us, there won't be enough for the short one."
 
-    s "That's fine, I can cook something up. C'mon guys, let's head inside."
+    a "({i}WHY IS SHE SO HYPERFIXATED ON MY HEIGHT???{/i})"
+    a "It appears I've lost my apetite from the smell of that horrid house of yours, so that wouldn't be a problem."
+
+    j "Angel..!"
+
+    m "Frankly, small one, I like your bluntness."
+    m "Scott, why did you choose such a weak man instead? You're meant to thrive in the world like your mother."
+
+    s "Mother, I don't appreicate your tone towards my partner and would like you to refrain from any further disrespect."
+    m "That doesn't change the fact that {i} I do not have enough food for all three of us. {/i}"
+
+    s "That's fine, I can cook something up. Let's just go inside..."
     m "..."
 
     j "Um.. th-thank you for welcoming us into your home, Ms.Ch-"
@@ -175,16 +193,19 @@ label start:
 
     hide j neutral
     show a neutral at character_transform
-    a "I'm not gonna apologize for that if SHE CAN HEAR US!! Scott is making such a nice dinner for us and she wanted to repay that BY SLAPPING YOU?"
+    a "I'm not gonna apologize for that if SHE CAN HEAR US!!"
+    a "Scott is making such a nice dinner for us and she wanted to repay that BY SLAPPING YOU?"
    
     hide a neutral
     show j neutral at character_transform
 
     j "There's not much we can do here..."
+    j "I shouldn't have upset her so much."
 
     hide j neutral
     show a neutral at character_transform
-    a "Honestly, if that's how she treats people cooking her a meal, I bet there's a ton more at resturants that are just spitting in her food."
+    a "You literally didn't do anything but breathe and that's a problem."
+    a "Honestly, if that's how she treats people cooking her a meal, I bet there's more spit than food she'd consumed."
     
     hide a neutral
     show j neutral at character_transform
@@ -198,21 +219,25 @@ label start:
 
     hide a neutral
     show j neutral at character_transform
-    j "It'll just be like good ol' times.. All over again..!"
-    j "It'll be harmless like those pranks that get views on the internet."
+    j "It'll just be like when we were younger! But this time, it's for justice."
+    j "It'll be harmless like those pranks on the internet, but big enough to where we get a reaction!"
 
     hide j neutral
     show a neutral at character_transform
-    a "No way man, that's Scott's mother you're talking about. She's sh*tty but we can't be that petty. We're not little kids anymore."
+    a "No way man, that's Scott's mother you're talking about."
+    a "She's sh*tty but we can't be that petty. We're not little kids anymore."
 
     hide a neutral
     show s neutral at character_transform
     s "She did hurt John... She's no mother of mine anymore."
+    s "Besides, there's nothing bad with a little life lesson."
+    s "We can see it as repayment in full."
 
     hide s neutral
     show a neutral at character_transform
 
-    a "..."
+    a "Seriously? You really want to go through with this?"
+    a "Isn't it sh*tty to snoop that low for a b*tch?"
 
     hide a neutral
     show j neutral at character_transform
@@ -236,7 +261,36 @@ label start:
 
     hide s neutral
     show a neutral at character_transform
-    a "...fine. I'll only look out for you."
+    a "Maybe back then would've been funny, but not in these circumstances."
+    a "We're adults, not stupid teenagers anymore."
+
+    hide a neutral
+
+    show j neutral at character_transform
+
+    j "Maybe you're right. I'm better than this."
+
+    hide j neutral
+    show s neutral at character_transform
+
+    s "Laxatives never hurt anyone right?"
+    s "We haven't had a good laugh in a while, you need to loosen up Angel."
+
+    hide s neutral
+    show a neutral at character_transform
+
+    a "It doesn't seem like I can convince either of you guys."
+    a "Fine. Whatever. I can't stop you guys either way."
+
+    show j neutral at character_transform, topright
+
+    j "Let's compromise then. How about you watch out for us?"
+
+    a "Just like old times."
+
+    hide j neutral
+    hide a neutral
+
     scene bg leadup1
     "..."
 
