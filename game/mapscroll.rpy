@@ -54,68 +54,110 @@ python early:
     }
 
     def parse_mapscroll(lexer):
-        print("????????")
-        return (lexer.word(), lexer.rest().split(' '))
+        subblock_lexer = lexer.subblock_lexer()
 
-    def enter_mapscroll(params, is_next=False):
-        print(params)
-        current_map, items_needed = params
+        with subblock_lexer.catch_error():
+            subblock_lexer.advance()
+            items_needed = set(subblock_lexer.rest().split())
+
+            mapscroll_events = {}
+            while subblock_lexer.advance():
+                    event_name, trigger_name, label_name = subblock_lexer.rest().split()
+                    if trigger_name not in mapscroll_events:
+                        mapscroll_events[trigger_name] = {}
+                    mapscroll_events[trigger_name][event_name] = label_name
+
+            return items_needed, mapscroll_events
+
+    def set_current_map(map_name):
+        global mapscroll_current_map
+        mapscroll_current_map = map_name
         renpy.scene()
         renpy.transition(dissolve)
-        renpy.show(f"bg {current_map}")
+        renpy.show(f"bg {map_name}")
+
+    def enter_mapscroll(params, is_next=False):
+        items_needed, mapscroll_events = params
+        set_current_map(mapscroll_current_map)
         if is_next:
-            renpy.show_screen("mapscroll_screen", current_map=current_map, items_needed=items_needed)
+            renpy.show_screen("mapscroll_screen", mapscroll_events=mapscroll_events, items_needed=items_needed)
         else:
-            renpy.call_screen("mapscroll_screen", current_map=current_map, items_needed={item: True for item in items_needed})
+            _window_hide()
+            renpy.call_screen("mapscroll_screen", mapscroll_events=mapscroll_events, items_needed=items_needed)
 
-    def pick_up_item(current_map, item_name, items_needed):
-        items_needed[item_name] = False
-        del maps[current_map]['items'][item_name]
-        if not any(items_needed.values()):
-            return 0
+    def handle_map_change(map_name, mapscroll_events, items_needed):
+        if map_name in mapscroll_events:
+            if 'before_enter' in mapscroll_events[map_name]:
+                renpy.jump(mapscroll_events[map_name]['before_enter'])
+                return mapscroll_events[map_name]['before_enter']
+
+            if 'on_enter' in mapscroll_events[map_name]:
+                set_current_map(map_name)
+                renpy.jump(mapscroll_events[map_name]['on_enter'])
+                return mapscroll_events[map_name]['on_enter']
+
+        global mapscroll_current_map
+        mapscroll_current_map = map_name
+        enter_mapscroll((items_needed, mapscroll_events), True)
+
+    def pick_up_item(item_name, mapscroll_events, items_needed):
+        if item_name in mapscroll_events and 'before_pickup' in mapscroll_events[item_name]:
+            renpy.jump(mapscroll_events[item_name]['before_pickup'])
+            return mapscroll_events[item_name]['before_pickup']
+
+        mapscroll_items_picked.add(item_name)
+        if item_name in mapscroll_events and 'on_pickup' in mapscroll_events[item_name]:
+            renpy.jump(mapscroll_events[item_name]['on_pickup'])
+            return mapscroll_events[item_name]['on_pickup']
         else:
-            enter_mapscroll((current_map, items_needed), True)
+            enter_mapscroll((items_needed, mapscroll_events), True)
 
-    renpy.register_statement("mapscroll", execute=enter_mapscroll, parse=parse_mapscroll)
+    renpy.register_statement("mapscroll", block=True, execute=enter_mapscroll, parse=parse_mapscroll)
 
-screen mapscroll_screen(current_map, items_needed):
-    if 'right' in maps[current_map]:
+
+# savegame variables
+default mapscroll_current_map = "kitchen"
+default mapscroll_items_picked = set()
+
+
+screen mapscroll_screen(mapscroll_events, items_needed):
+    if 'right' in maps[mapscroll_current_map]:
         imagebutton:
             auto 'gui/button/arrow_right_%s.png'
             xalign 0.98
             yalign 0.5
-            action Function(enter_mapscroll, (maps[current_map]['right'], items_needed), True)
+            action Function(handle_map_change, maps[mapscroll_current_map]['right'], mapscroll_events, items_needed)
             at buttonzoom
-    if 'left' in maps[current_map]:
+    if 'left' in maps[mapscroll_current_map]:
         imagebutton:
             auto 'gui/button/arrow_left_%s.png'
             xalign 0.02
             yalign 0.5
-            action Function(enter_mapscroll, (maps[current_map]['left'], items_needed), True)
+            action Function(handle_map_change, maps[mapscroll_current_map]['left'], mapscroll_events, items_needed)
             at buttonzoom
-    if 'up' in maps[current_map]:
+    if 'up' in maps[mapscroll_current_map]:
         imagebutton:
             auto 'gui/button/arrow_up_%s.png'
             xalign 0.5
             yalign 0.02
-            action Function(enter_mapscroll, (maps[current_map]['up'], items_needed), True)
+            action Function(handle_map_change, maps[mapscroll_current_map]['up'], mapscroll_events, items_needed)
             at buttonzoom
-    if 'down' in maps[current_map]:
+    if 'down' in maps[mapscroll_current_map]:
         imagebutton:
             auto 'gui/button/arrow_down_%s.png'
             xalign 0.5
             yalign 0.95
-            action Function(enter_mapscroll, (maps[current_map]['down'], items_needed), True)
+            action Function(handle_map_change, maps[mapscroll_current_map]['down'], mapscroll_events, items_needed)
             at buttonzoom
-    if 'items' in maps[current_map]:
-        for item_name, item_info in maps[current_map]['items'].items():
-            if item_name not in items_needed or items_needed[item_name]:
+    if 'items' in maps[mapscroll_current_map]:
+        for item_name, item_info in maps[mapscroll_current_map]['items'].items():
+            if item_name not in mapscroll_items_picked:
                 imagebutton:
                     idle f'images/item {item_name}.png'
                     xalign item_info['x']
                     yalign item_info['y']
-                    if item_name in items_needed:
-                        action Function(pick_up_item, current_map, item_name, items_needed)
+                    if item_name in items_needed or item_name in mapscroll_events:
+                        action Function(pick_up_item, item_name, mapscroll_events, items_needed)
                     else:
                         pass  # TODO: tell john he's stupid
                     at buttonzoom(item_info['zoom'])
